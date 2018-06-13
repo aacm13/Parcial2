@@ -37,7 +37,7 @@ public class Menu {
             switch(opc){
                 case 1:
                     Jugador1();
-                    Jugador2();
+                    //Jugador2();
                     b=false;
                     break;
                 case 2:
@@ -51,10 +51,12 @@ public class Menu {
     }
    //Jugador 1
     public void Jugador1(){
+        for (int i=1;i<=2;i++){
+        
         int opc;
         Scanner input = new Scanner(System.in);
         FactoryProducer raza = new FactoryProducer();
-        System.out.println("Jugador 1: ");
+        System.out.println("Jugador "+i+": ");
         System.out.println("Seleccione la faccion: ");
         System.out.println("1. Mandalorians");//mandalorian warriors
         System.out.println("2. Ibbennesse");//ibbennesse mages
@@ -63,23 +65,23 @@ public class Menu {
             boolean b =true;
             while (b){   
                 opc = input.nextInt();
-                String faccion1;
+                String faccion;
                 switch(opc){
                     case 1:
-                        faccion1 = "Mandalorians";
-                        System.out.println("Jugador 1 a elegido ");
+                        faccion = "Mandalorians";
+                        System.out.println("Jugador "+i+" a elegido ");
                         System.out.println("Mandalorian..\n");
                         b = false;
                         break;
                     case 2:
-                        faccion1 = "Ibbennesse";
-                        System.out.println("Jugador 1 a elegido ");
+                        faccion = "Ibbennesse";
+                        System.out.println("Jugador "+i+" a elegido ");
                         System.out.println("Ibbennesse..\n");
                         b = false;
                         break;
                     case 3:
-                        faccion1 = "Telekhines";
-                        System.out.println("Jugador 1 a elegido ");
+                        faccion = "Telekhines";
+                        System.out.println("Jugador "+i+" a elegido ");
                         System.out.println("Telekhines..\n");
                         b = false;
                         break;            
@@ -92,8 +94,9 @@ public class Menu {
             input.nextLine();
            
         }
+        }
     }
-    // Jugador 2
+    /* Jugador 2
     public void Jugador2(){
         int opc;
         Scanner input = new Scanner(System.in);
@@ -138,7 +141,7 @@ public class Menu {
             input.nextLine();
            
         }
-    }
+    }*/
 }
    
    
