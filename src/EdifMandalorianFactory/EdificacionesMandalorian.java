@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AbstracFactory;
+package EdifMandalorianFactory;
 
 /**
  *
- * @author Jorge
+ * @author aacm12
  */
-public enum Type {
-    MANDALORIANS,
-    TELEKHINES,
-    IBBENNESSE
+public interface EdificacionesMandalorian {
+    public int GenerarRecurso();
+
 }

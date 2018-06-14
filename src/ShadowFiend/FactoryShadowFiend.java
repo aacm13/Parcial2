@@ -10,7 +10,7 @@ import AbstractFactoryIbben.Ibb;
 import AbstractFactoryMandalore.Mandalore;
 import AbstractFactoryTelekhines.Telekhines;
 import SaberTank.Tank;
-import Basilisk.Basilisk;
+import EdifMandalorianFactory.Basilisk;
 
 /**
  *
