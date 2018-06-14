@@ -8,7 +8,7 @@ package SaberTank;
 import AbstracFactory.AbstractFactory;
 import AbstractFactoryIbben.Ibb;
 import AbstractFactoryMandalore.Mandalore;
-import Telekhines.Telekhines;
+import AbstractFactoryTelekhines.Telekhines;
 import ShadowFiend.Shadow;
 import Basilisk.Basilisk;
 

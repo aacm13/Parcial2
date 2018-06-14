@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AbstractFactoryMandalore;
+package AbstractFactoryTelekhines;
 
 import java.util.*;
-
 /**
  *
  * @author aacm12
  */
-//Centro de Mando, tierra natal de los guerreros conocidos como los Mandalorians
-//Estos viene de una cultura guerrera por lo cual tienen una ventaja en el combate
-//      ++Mayor Vida y Mayor Daño causado
-//Debido a su cultura guerrera no le ponen mucha atencion a la Arquitectura
-//      --1+ turno en tiempo de construccion de edificaciones
-public class Mandalore {
+//Centro de Mando, esta es una raza de humanoides con aparience perruna los cuales
+//an llegado a reconicimiento legendario ya que es dicho que sus ancestros forjaron 
+//el Tridente del dios Poseidon, lastimosamente han perdido prestigio debido a ser desterrados
+//por la practica de magia negra. No son grandes guerreros, pero nunca encontraras mejores contructores
+//y herreros
+//      ++Mayor Daño causado y -1 turno en todas sus contruciones
+//      --Menor vida y Menor recoleccion de recursos(debido a destierro)
+public class Telekhines {
     //Recursos Iniciales, tiene una quinta parte del total maximo de la primera base
     private int Cobre = 2000;
     private int Plata = 1000;
@@ -25,8 +26,8 @@ public class Mandalore {
     private int maxP = 5000;//Max Plata
     private int maxO = 3000;//Max Oro
     
-    private ArrayList<EdificacionesMandalorian> EdificacionesMandalorian = new
-         ArrayList<EdificacionesMandalorian>();
+    private ArrayList<EdificacionesTelekhines> EdificacionesTelekhines = new
+         ArrayList<EdificacionesTelekhines>();
     //getter y setter
 
     public int getCobre() {
@@ -53,8 +54,8 @@ public class Mandalore {
         return maxO;
     }
 
-    public ArrayList<EdificacionesMandalorian> getEdificacionesMandalorian() {
-        return EdificacionesMandalorian;
+    public ArrayList<EdificacionesTelekhines> getEdificacionesTelekhines() {
+        return EdificacionesTelekhines;
     }
 
     public void setCobre(int Cobre) {
@@ -81,7 +82,7 @@ public class Mandalore {
         this.maxO = maxO;
     }
 
-    public void setEdificacionesMandalorian(ArrayList<EdificacionesMandalorian> EdificacionesMandalorian) {
-        this.EdificacionesMandalorian = EdificacionesMandalorian;
+    public void setEdificacionesTelekhines(ArrayList<EdificacionesTelekhines> EdificacionesTelekhines) {
+        this.EdificacionesTelekhines = EdificacionesTelekhines;
     }
 }

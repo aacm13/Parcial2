@@ -7,7 +7,7 @@ package AbstracFactory;
 
 import AbstractFactoryIbben.Ibb;
 import AbstractFactoryMandalore.Mandalore;
-import Telekhines.Telekhines;
+import AbstractFactoryTelekhines.Telekhines;
 import SaberTank.Tank;
 import ShadowFiend.Shadow;
 import Basilisk.Basilisk;

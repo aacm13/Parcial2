@@ -6,7 +6,7 @@
 package AbstracFactory;
 
 import AbstractFactoryMandalore.FactoryMandalorian;
-import Telekhines.FactoryTelekhines;
+import AbstractFactoryTelekhines.FactoryTelekhines;
 import Basilisk.FactoryBasilisk;
 import SaberTank.FactorySaberTank;
 import ShadowFiend.FactoryShadowFiend;

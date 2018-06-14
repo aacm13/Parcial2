@@ -8,7 +8,7 @@ package ShadowFiend;
 import AbstracFactory.AbstractFactory;
 import AbstractFactoryIbben.Ibb;
 import AbstractFactoryMandalore.Mandalore;
-import Telekhines.Telekhines;
+import AbstractFactoryTelekhines.Telekhines;
 import SaberTank.Tank;
 import Basilisk.Basilisk;
 
