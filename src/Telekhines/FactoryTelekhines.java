@@ -6,8 +6,8 @@
 package Telekhines;
 
 import AbstracFactory.AbstractFactory;
-import Ibbennesee.Ibb;
-import Mandalorian.Mandalore;
+import AbstractFactoryIbben.Ibb;
+import AbstractFactoryMandalore.Mandalore;
 import SaberTank.Tank;
 import ShadowFiend.Shadow;
 import Basilisk.Basilisk;

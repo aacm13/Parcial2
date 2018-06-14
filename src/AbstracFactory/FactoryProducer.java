@@ -5,12 +5,12 @@
  */
 package AbstracFactory;
 
-import Mandalorian.FactoryMandalorian;
+import AbstractFactoryMandalore.FactoryMandalorian;
 import Telekhines.FactoryTelekhines;
 import Basilisk.FactoryBasilisk;
 import SaberTank.FactorySaberTank;
 import ShadowFiend.FactoryShadowFiend;
-import Ibbennesee.FactoryIbbennesse;
+import AbstractFactoryIbben.FactoryIbbennesse;
 
 /**
  *

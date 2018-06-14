@@ -6,8 +6,8 @@
 package SaberTank;
 
 import AbstracFactory.AbstractFactory;
-import Ibbennesee.Ibb;
-import Mandalorian.Mandalore;
+import AbstractFactoryIbben.Ibb;
+import AbstractFactoryMandalore.Mandalore;
 import Telekhines.Telekhines;
 import ShadowFiend.Shadow;
 import Basilisk.Basilisk;

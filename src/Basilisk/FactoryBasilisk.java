@@ -6,8 +6,8 @@
 package Basilisk;
 
 import AbstracFactory.AbstractFactory;
-import Ibbennesee.Ibb;
-import Mandalorian.Mandalore;
+import AbstractFactoryIbben.Ibb;
+import AbstractFactoryMandalore.Mandalore;
 import Telekhines.Telekhines;
 import SaberTank.Tank;
 import ShadowFiend.Shadow;
