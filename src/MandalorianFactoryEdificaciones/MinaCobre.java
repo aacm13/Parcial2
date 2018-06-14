@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EdifMandalorianFactory;
+package MandalorianFactoryEdificaciones;
 
 /**
  *
  * @author aacm12
  */
-//los Basilisk son una nave aerea contrudia por los Mandalorian
-public class FabricaBasilisk implements EdificacionesMandalorian{
+public class MinaCobre implements EdificacionesMandalorian {
+    
     private int vida;
 
-    public FabricaBasilisk() {
+    public MinaCobre() {
     }
 
-    public FabricaBasilisk(int vida) {
+    public MinaCobre(int vida) {
         this.vida = vida;
     }
 
@@ -27,12 +27,11 @@ public class FabricaBasilisk implements EdificacionesMandalorian{
     public void setVida(int vida) {
         this.vida = vida;
     }
+    
 
     @Override
     public int GenerarRecurso() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-
     
 }

@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EdifMandalorianFactory;
+package MandalorianFactoryEdificaciones;
 
 /**
  *
  * @author aacm12
  */
-public class MinaOro implements EdificacionesMandalorian {
+public class MinaPlata implements EdificacionesMandalorian {
     
     private int vida;
 
-    public MinaOro() {
+    public MinaPlata() {
     }
 
-    public MinaOro(int vida) {
+    public MinaPlata(int vida) {
         this.vida = vida;
     }
 

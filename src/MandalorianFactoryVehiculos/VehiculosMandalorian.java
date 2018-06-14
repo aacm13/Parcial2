@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Raza;
+package MandalorianFactoryVehiculos;
 
 /**
  *
- * @author Jorge
+ * @author aacm12
  */
-public class CentroDeMando {
-    private int recursos;
-    private int recuersosR;
-    
+public interface VehiculosMandalorian {
+    public int vida(int EnemyDamage);
+    public int attack();
+    public void damage(int EnemyDamage);
     
 }

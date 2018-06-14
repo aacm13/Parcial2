@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package SaberTank;
+package MandalorianFactoryEdificaciones;
 
 /**
  *
- * @author UCA
+ * @author aacm12
  */
-public class SaberTank {
-     
+public interface EdificacionesMandalorian {
+    public int GenerarRecurso();
+
 }

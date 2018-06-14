@@ -5,9 +5,9 @@
  */
 package AbstractFactoryMandalore;
 
-import EdifMandalorianFactory.EdificacionesMandalorian;
-import SoldaMandalorianFactory.SoldadosMandalorian;
-import VehMandalorianFactory.VehiculosMandalorian;
+import MandalorianFactoryEdificaciones.EdificacionesMandalorian;
+import MandalorianFactorySoldados.Tropas;
+import MandalorianFactoryVehiculos.VehiculosMandalorian;
 
 /**
  *
@@ -20,6 +20,6 @@ public abstract class AbstractFactoryMandalorian {
 
     public abstract VehiculosMandalorian getVehiculoMandalorian(String tipo);
 
-    public abstract SoldadosMandalorian getSoldadoMandalorian(String tipo);
+    public abstract Tropas getSoldadoMandalorian(String tipo);
 
 }

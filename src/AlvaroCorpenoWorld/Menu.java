@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package AlvaroCorpenoWorld;
-import AbstracFactory.FactoryProducer;
+//import AbstracFactory.FactoryProducer;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
@@ -59,7 +59,7 @@ public class Menu {
         int opc;
         String faccion="";
         Scanner input = new Scanner(System.in);
-        FactoryProducer raza = new FactoryProducer();
+        //FactoryProducer raza = new FactoryProducer();
         System.out.println("Jugador "+1+": ");
         System.out.println("Seleccione la faccion: ");
         System.out.println("1. Mandalorians");//mandalorian warriors
@@ -115,7 +115,7 @@ public class Menu {
         int opc;
         String faccion="";
         Scanner input = new Scanner(System.in);
-        FactoryProducer raza = new FactoryProducer();
+        //FactoryProducer raza = new FactoryProducer();
         System.out.println("Jugador 2: ");
         System.out.println("Seleccione la faccion: ");
         System.out.println("1. Mandalorians");//mandalorian warriors

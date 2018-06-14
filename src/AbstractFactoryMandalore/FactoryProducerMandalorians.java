@@ -5,9 +5,9 @@
  */
 package AbstractFactoryMandalore;
 
-import EdifMandalorianFactory.EdificacionMandalorianFactory;
-import SoldaMandalorianFactory.SoldadosMandalorianFactory;
-import VehMandalorianFactory.VehiculoMandalorianFactory;
+import MandalorianFactoryEdificaciones.EdificacionMandalorianFactory;
+import MandalorianFactorySoldados.MandalorianFactoryTropas;
+import MandalorianFactoryVehiculos.MandalorianFactoryVehiculos;
 /**
  *
  * @author aacm12
@@ -20,7 +20,7 @@ public class FactoryProducerMandalorians {
             case "Vehiculos":
                 return null;
             case "Soldados":
-                return new SoldadoMandalorianFactory(); //retornará una nueva opcion de qué tipo de soldado utilizar.
+                return new MandalorianFactoryTropas(); //retornará una nueva opcion de qué tipo de soldado utilizar.
             
         }
         return null;
