@@ -26,6 +26,8 @@ public class Menu {
    
     public void Inicio(){
         int opc=0;
+        String j1="";
+        String j2="";
         boolean b = true;
         Scanner input = new Scanner(System.in);
         System.out.println(" ----------------");
@@ -36,8 +38,8 @@ public class Menu {
             opc = input.nextInt();
             switch(opc){
                 case 1:
-                    Jugador1();
-                    //Jugador2();
+                    j1 =Jugador1();
+                    j2 =Jugador2();
                     b=false;
                     break;
                 case 2:
@@ -48,42 +50,49 @@ public class Menu {
                     System.out.println("Ingrese una opcion valida");
             }
         }
+        
     }
    //Jugador 1
-    public void Jugador1(){
-        for (int i=1;i<=2;i++){
+    public String Jugador1(){
+        
         
         int opc;
+        String faccion="";
         Scanner input = new Scanner(System.in);
         FactoryProducer raza = new FactoryProducer();
-        System.out.println("Jugador "+i+": ");
+        System.out.println("Jugador "+1+": ");
         System.out.println("Seleccione la faccion: ");
         System.out.println("1. Mandalorians");//mandalorian warriors
         System.out.println("2. Ibbennesse");//ibbennesse mages
-        System.out.println("3. Telekhines");//dog people, greate builders and craftman    
+        System.out.println("3. Telekhines");//dog people, greate builders and craftman   
+        boolean ba =true;
+        while (ba){
         try{
             boolean b =true;
             while (b){   
                 opc = input.nextInt();
-                String faccion;
+                
                 switch(opc){
                     case 1:
                         faccion = "Mandalorians";
-                        System.out.println("Jugador "+i+" a elegido ");
+                        System.out.println("Jugador "+1+" a elegido ");
                         System.out.println("Mandalorian..\n");
                         b = false;
+                        ba = false;
                         break;
                     case 2:
                         faccion = "Ibbennesse";
-                        System.out.println("Jugador "+i+" a elegido ");
+                        System.out.println("Jugador "+1+" a elegido ");
                         System.out.println("Ibbennesse..\n");
                         b = false;
+                        ba = false;
                         break;
                     case 3:
                         faccion = "Telekhines";
-                        System.out.println("Jugador "+i+" a elegido ");
+                        System.out.println("Jugador "+1+" a elegido ");
                         System.out.println("Telekhines..\n");
                         b = false;
+                        ba = false;
                         break;            
                     default:
                         System.out.println("Ingrese una opcion valida");
@@ -95,53 +104,66 @@ public class Menu {
            
         }
         }
+        
+        
+        return faccion;
     }
-    /* Jugador 2
-    public void Jugador2(){
+    //Jugador 2
+    public String Jugador2(){
+        
+        
         int opc;
+        String faccion="";
         Scanner input = new Scanner(System.in);
         FactoryProducer raza = new FactoryProducer();
         System.out.println("Jugador 2: ");
         System.out.println("Seleccione la faccion: ");
-        System.out.println("1. Mandalorians");
-        System.out.println("2. Ibennesse");
-        System.out.println("3. Telekhines");    
+        System.out.println("1. Mandalorians");//mandalorian warriors
+        System.out.println("2. Ibbennesse");//ibbennesse mages
+        System.out.println("3. Telekhines");//dog people, greate builders and craftman   
+        boolean ba =true;
+        while (ba){
         try{
-               
             boolean b =true;
             while (b){   
                 opc = input.nextInt();
-                String faccion2;
+                
                 switch(opc){
                     case 1:
-                        faccion2 = "Mandalorians";
+                        faccion = "Mandalorians";
                         System.out.println("Jugador 2 a elegido ");
                         System.out.println("Mandalorian..\n");
                         b = false;
+                        ba = false;
                         break;
                     case 2:
-                        faccion2 = "Ibbennesse";
+                        faccion = "Ibbennesse";
                         System.out.println("Jugador 2 a elegido ");
                         System.out.println("Ibbennesse..\n");
                         b = false;
+                        ba = false;
                         break;
                     case 3:
-                        faccion2 = "Telekhines";
+                        faccion = "Telekhines";
                         System.out.println("Jugador 2 a elegido ");
                         System.out.println("Telekhines..\n");
                         b = false;
+                        ba = false;
                         break;            
                     default:
                         System.out.println("Ingrese una opcion valida");
                 }
             }
-           
         }catch (InputMismatchException e){
             System.err.println("Ingrese una opcion correcta");
             input.nextLine();
            
         }
-    }*/
+        }
+        
+        
+        return faccion;
+    }
 }
    
    
