@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package AbstractFactoryMandalore;
+package AbstractFactoryBravos;
 
-import java.util.*;
+import java.util.ArrayList;
 
 /**
  *
  * @author aacm12
  */
-//Centro de Mando, tierra natal de los guerreros conocidos como los Mandalorians
-//Estos viene de una cultura guerrera por lo cual tienen una ventaja en el combate
-//      ++Mayor Vida y Mayor Daño causado
-//Debido a su cultura guerrera no le ponen mucha atencion a la Arquitectura
-//      --1+ turno en tiempo de construccion de edificaciones
-public class Mandalore {
+//Centro de Mando, Isla natal de las personas conocidas como los Bravosi
+//En tiempo recientes ellos an empezado una era de expancion en la cual han conquistado
+//naciones vecinas, pero al final del dia ellos no son guerreros pero comerciante
+//      --No tienen desventajas
+//      ++General mayor cantidad de recursos por turno
+public class Bravos {
     //Recursos Iniciales, tiene una quinta parte del total maximo de la primera base
     private int Cobre = 2000;
     private int Plata = 1000;
@@ -25,8 +25,8 @@ public class Mandalore {
     private int maxP = 5000;//Max Plata
     private int maxO = 3000;//Max Oro
     
-    private ArrayList<EdificacionesMandalorians> EdificacionesMandalorians = new
-         ArrayList<EdificacionesMandalorian>();
+    private ArrayList<EdificacionesBravosi> EdificacionesBravosi = new
+         ArrayList<EdificacionesIBravosi>();
     //getter y setter
 
     public int getCobre() {
@@ -53,8 +53,8 @@ public class Mandalore {
         return maxO;
     }
 
-    public ArrayList<EdificacionesMandalorian> getEdificacionesMandalorians() {
-        return EdificacionesMandalorians;
+    public ArrayList<EdificacionesBravosi> getEdificacionesBravosi() {
+        return EdificacionesBravosi;
     }
 
     public void setCobre(int Cobre) {
@@ -81,7 +81,7 @@ public class Mandalore {
         this.maxO = maxO;
     }
 
-    public void setEdificacionesEsqueletos(ArrayList<EdificacionesMandalorian> EdificacionesMandalorians) {
-        this.EdificacionesMandalorians = EdificacionesMandalorians;
+    public void setEdificacionesBravosi(ArrayList<EdificacionesBravosi> EdificacionesBravosi) {
+        this.EdificacionesBravosi = EdificacionesBravosi;
     }
 }
