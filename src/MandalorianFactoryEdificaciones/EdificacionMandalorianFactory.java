@@ -17,18 +17,17 @@ public class EdificacionMandalorianFactory extends AbstractFactoryMandalorian {
     @Override
     public EdificacionesMandalorian getEdificacionMandalorian(String tipo) {
         switch (tipo) {
-            case "Edif recurso Cobre":
+            case "Mina de Cobre":
                 return new MinaCobre(); //Debo colocar una opción de recolectar recuros...
-            case "Edif recurso Plata":
+            case "Mina de Plata":
                 return new MinaPlata(); //Debo colocar una opción de recolectar recuros...
-            case "Edif recurso Oro":
-                System.out.println("..SE EJECUTA ESTO SIN PROBLEMAS");
+            case "Mina de Oro":
                 return new MinaOro(); //generará el recurso automáticamente...
-            case "Edif entrenamiento Super Soldado y Milicia": //**** luego deberé amarrar que si creo unos soldados no pueden existir sin esta edif...
+            case "Barracks (Entrena Supercommando y Night Owls)": //**** luego deberé amarrar que si creo unos soldados no pueden existir sin esta edif...
                 return new MandalorianBarracks();
-            case "Edif entrenamiento Basilisk": //Vehiculo aéreo
+            case "Fabrica Basilisk": //Vehiculo aéreo
                 return new FabricaBasilisk();
-            case "Edif entrenamiento SaberTank": //Vehiculo terrestre
+            case "Fabrica SaberTank": //Vehiculo terrestre
                 return new FabricaSabertank();
         }
         return null;

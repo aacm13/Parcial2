@@ -14,7 +14,7 @@ import Menu.FuncionesMenu;
  */
 public class MinaPlata implements EdificacionesMandalorian {
     Mandalore M = new Mandalore();
-    private int vida=1000;
+    private int vida=500;
     private int Temp, Inicial;
 
     public MinaPlata() {
@@ -37,10 +37,9 @@ public class MinaPlata implements EdificacionesMandalorian {
     @Override
     public void GenerarRecurso() {
         if (FuncionesMenu.fase > (Inicial + 2)) {
-            System.out.println("Cantidad de plata actual " + M.getPlata());
+            System.out.println("Plata: " + M.getPlata());
             Temp = M.getPlata();
-            //después de ciertas fases      ESTO SE ARREGLA CON UN WHILE O FOR, O INCLUSIVE IF...
-            Temp += (Temp * 0.2);
+            Temp += 200;
             M.setPlata(Temp);
             System.out.println("después de "+FuncionesMenu.fase+" fases ahora posee: " + M.getPlata());
         }

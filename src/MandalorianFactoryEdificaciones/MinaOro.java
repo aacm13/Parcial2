@@ -5,15 +5,21 @@
  */
 package MandalorianFactoryEdificaciones;
 
+import AbstractFactoryMandalore.Mandalore;
+import Menu.FuncionesMenu;
+
 /**
  *
  * @author aacm12
  */
 public class MinaOro implements EdificacionesMandalorian {
     
-    private int vida;
+    Mandalore M = new Mandalore();
+    private int vida=500;
+    private int Temp, Inicial;
 
     public MinaOro() {
+        Inicial = FuncionesMenu.fase;
     }
 
     public MinaOro(int vida) {
@@ -31,7 +37,16 @@ public class MinaOro implements EdificacionesMandalorian {
 
     @Override
     public void GenerarRecurso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (FuncionesMenu.fase > (Inicial + 2)) {
+            System.out.println("Oro: " + M.getOro());
+            Temp = M.getOro();
+            Temp += 200;
+            M.setOro(Temp);
+            System.out.println("después de "+FuncionesMenu.fase+" fases ahora posee: " + M.getOro());
+        }
+        else{
+            System.out.println("La edificación Oro ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
+        }
     }
     
 }
