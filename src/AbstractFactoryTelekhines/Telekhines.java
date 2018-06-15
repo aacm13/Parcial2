@@ -17,7 +17,7 @@ import java.util.*;
 //por la practica de magia negra. No son grandes guerreros, pero nunca encontraras mejores contructores
 //y herreros
 //      ++Mayor Daño causado y -1 turno en todas sus contruciones
-//      --Menor vida y Menor recoleccion de recursos(debido a destierro)
+//      --Menor vida y Menor recoleccion de recursos(debido a destierro) 30 - recursos
 public class Telekhines {
     //Recursos Iniciales, tiene una quinta parte del total maximo de la primera base
     private int Cobre = 2000;
@@ -29,6 +29,7 @@ public class Telekhines {
     
     private ArrayList<EdificacionesTelekhines> EdificacionesTelekhines = new
          ArrayList<EdificacionesTelekhines>();
+    
     //getter y setter
 
     public int getCobre() {
