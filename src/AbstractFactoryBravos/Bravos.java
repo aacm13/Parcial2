@@ -5,6 +5,7 @@
  */
 package AbstractFactoryBravos;
 
+import BravosiFactoryEdificaciones.EdificacionesBravosi;
 import java.util.ArrayList;
 
 /**
@@ -14,8 +15,8 @@ import java.util.ArrayList;
 //Centro de Mando, Isla natal de las personas conocidas como los Bravosi
 //En tiempo recientes ellos an empezado una era de expancion en la cual han conquistado
 //naciones vecinas, pero al final del dia ellos no son guerreros pero comerciante
-//      --No tienen desventajas
-//      ++General mayor cantidad de recursos por turno
+//      --No tienen desventajas ni ventajas
+//      ++Generar mayor cantidad de recursos por turno
 public class Bravos {
     //Recursos Iniciales, tiene una quinta parte del total maximo de la primera base
     private int Cobre = 2000;
@@ -26,7 +27,7 @@ public class Bravos {
     private int maxO = 3000;//Max Oro
     
     private ArrayList<EdificacionesBravosi> EdificacionesBravosi = new
-         ArrayList<EdificacionesIBravosi>();
+         ArrayList<EdificacionesBravosi>();
     //getter y setter
 
     public int getCobre() {

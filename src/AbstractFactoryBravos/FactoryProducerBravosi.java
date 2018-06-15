@@ -5,9 +5,9 @@
  */
 package AbstractFactoryBravos;
 
-import EdifBravosiFactory.EdificacionBravosiFactory;
-import SoldaBravosiFactory.SoldadosBravosiFactory;
-import VehBravosiFactory.VehiculoBravosiFactory;
+import BravosiFactoryEdificaciones.EdificacionBravosiFactory;
+import BravosiFactorySoldados.BravosiFactoryMilitia;
+import BravosiFactoryVehiculos.BravosiFactoryVehiculos;
 /**
  *
  * @author aacm12
@@ -20,7 +20,7 @@ public class FactoryProducerBravosi {
             case "Vehiculos":
                 return null;
             case "Soldados":
-                return new SoldadoBravosiFactory(); //retornará una nueva opcion de qué tipo de soldado utilizar.
+                return new BravosiFactoryMilitia(); //retornará una nueva opcion de qué tipo de soldado utilizar.
             
         }
         return null;

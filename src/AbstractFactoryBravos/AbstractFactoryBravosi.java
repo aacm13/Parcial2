@@ -5,9 +5,9 @@
  */
 package AbstractFactoryBravos;
 
-import EdifBravosiFactory.EdificacionesBravosi;
-import SoldaBravosiFactory.SoldadosBravosi;
-import VehBravosiFactory.VehiculosBravosi;
+import BravosiFactoryEdificaciones.EdificacionesBravosi;
+import BravosiFactorySoldados.Militia;
+import BravosiFactoryVehiculos.VehiculosBravosi;
 
 /**
  *
@@ -20,6 +20,6 @@ public abstract class AbstractFactoryBravosi {
 
     public abstract VehiculosBravosi getVehiculoBravosi(String tipo);
 
-    public abstract SoldadosBravosi getSoldadoBravosi(String tipo);
+    public abstract Militia getSoldadoBravosi(String tipo);
 
 }
