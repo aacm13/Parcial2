@@ -38,6 +38,8 @@ public class Mandalore {
     
     private ArrayList<EdificacionesMandalorian> EdificacionesMandalorian = new
          ArrayList<EdificacionesMandalorian>();
+    
+    
     //getter y setter
 
     public int getCobre() {
