@@ -13,7 +13,7 @@ package TelekhinesFactoryEdificaciones;
  */
 public class TelekhinesHall implements EdificacionesTelekhines{
     
-    private int vida;
+    private int vida=500;
 
     public TelekhinesHall() {
     }
@@ -34,5 +34,8 @@ public class TelekhinesHall implements EdificacionesTelekhines{
     public void GenerarRecurso() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+    @Override
+    public void guardar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

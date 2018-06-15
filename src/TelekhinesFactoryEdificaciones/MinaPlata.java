@@ -15,7 +15,7 @@ import Menu.FuncionesMenu;
  * @author aacm12
  */
 public class MinaPlata implements EdificacionesTelekhines {
-    Telekhines M = new Telekhines();
+    Telekhines T = new Telekhines();
     private int vida=500;
     private int Temp, Inicial;
 
@@ -39,26 +39,30 @@ public class MinaPlata implements EdificacionesTelekhines {
     @Override
     public void GenerarRecurso() {
         if (FuncionesMenu.fase > (Inicial + 2)) {
-            Temp = M.getPlata();
-            if (Temp<M.getMaxP()){
-                System.out.println("Plata: " + M.getPlata());
-                Temp += 200;
-                if (Temp>M.getMaxP()){
-                    int sobra = Temp-M.getMaxP();
+            Temp = T.getPlata();
+            if (Temp<T.getMaxP()){
+                System.out.println("Plata: " + T.getPlata());
+                Temp += (200*0.7);
+                if (Temp>T.getMaxP()){
+                    int sobra = Temp-T.getMaxP();
                     Temp = Temp-sobra;
                     System.out.println("COFRE SE A LLENADO");
                 }
-                M.setPlata(Temp);
+                T.setPlata(Temp);
                 System.out.println("Fase "+FuncionesMenu.fase);
-                System.out.println("Nuevo Valor Plata: " + M.getPlata());
+                System.out.println("Nuevo Valor Plata: " + T.getPlata());
             }else{
-                System.out.println("Plata: " + M.getPlata());
+                System.out.println("Plata: " + T.getPlata());
                 System.out.println("COFRE DE Plata LLENO, tendra que gastar Plata antes de poder seguir generando");
             }
-        }
-        else{
+        }else{
             System.out.println("La edificación Plata ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
         }
     }
     
+    
+    @Override
+    public void guardar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

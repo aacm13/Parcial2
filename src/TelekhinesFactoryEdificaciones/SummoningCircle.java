@@ -13,7 +13,8 @@ package TelekhinesFactoryEdificaciones;
  */
 //los Sabertank son una tanketa terrestre contrudia por los Mandalorian con grn capacidad de desrtuccion
 public class SummoningCircle implements EdificacionesTelekhines{
-    private int vida;
+    private int vida=500;
+    
 
     public SummoningCircle() {
     }
@@ -32,6 +33,11 @@ public class SummoningCircle implements EdificacionesTelekhines{
 
     @Override
     public void GenerarRecurso() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    @Override
+    public void guardar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

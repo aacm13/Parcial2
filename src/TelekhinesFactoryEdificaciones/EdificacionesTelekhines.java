@@ -13,5 +13,6 @@ package TelekhinesFactoryEdificaciones;
  */
 public interface EdificacionesTelekhines {
     public void GenerarRecurso();
+    public void guardar();
 
 }
