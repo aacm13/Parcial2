@@ -62,7 +62,7 @@ public class Bravos {
         this.Cobre = Cobre;
     }
 
-    public void setPalta(int Plata) {
+    public void setPlata(int Plata) {
         this.Plata = Plata;
     }
 

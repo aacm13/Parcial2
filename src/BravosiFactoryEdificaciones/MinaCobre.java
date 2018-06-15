@@ -5,6 +5,9 @@
  */
 package BravosiFactoryEdificaciones;
 
+import AbstractFactoryBravos.Bravos;
+import Menu.FuncionesMenu;
+
 
 
 
@@ -14,10 +17,12 @@ package BravosiFactoryEdificaciones;
  * @author aacm12
  */
 public class MinaCobre implements EdificacionesBravosi {
-    
-    private int vida;
+    Bravos M = new Bravos();
+    private int vida=500;
+    private int Temp, Inicial;
 
     public MinaCobre() {
+        Inicial = FuncionesMenu.fase;
     }
 
     public MinaCobre(int vida) {
@@ -35,7 +40,27 @@ public class MinaCobre implements EdificacionesBravosi {
 
     @Override
     public void GenerarRecurso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (FuncionesMenu.fase > (Inicial + 2)) {
+            Temp = M.getCobre();
+            if (Temp<M.getMaxC()){
+                System.out.println("Cobre: " + M.getCobre());
+                Temp += 200;
+                if (Temp>M.getMaxC()){
+                    int sobra = Temp-M.getMaxC();
+                    Temp = Temp-sobra;
+                    System.out.println("COFRE SE A LLENADO");
+                }
+                M.setCobre(Temp);
+                System.out.println("Fase "+FuncionesMenu.fase);
+                System.out.println("Nuevo Valor Cobre: " + M.getCobre());
+            }else{
+                System.out.println("Cobre: " + M.getOro());
+                System.out.println("COFRE DE Cobre LLENO, tendra que gastar Cobre antes de poder seguir generando");
+            }
+        }
+        else{
+            System.out.println("La edificación Oro ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
+        }
     }
     
 }

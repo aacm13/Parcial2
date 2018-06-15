@@ -38,14 +38,25 @@ public class MinaCobre implements EdificacionesMandalorian {
     @Override
     public void GenerarRecurso() {
         if (FuncionesMenu.fase > (Inicial + 2)) {
-            System.out.println("Plata: " + M.getCobre());
             Temp = M.getCobre();
-            Temp += 200;
-            M.setCobre(Temp);
-            System.out.println("después de "+FuncionesMenu.fase+" fases ahora posee: " + M.getCobre());
+            if (Temp<M.getMaxC()){
+                System.out.println("Cobre: " + M.getCobre());
+                Temp += 200;
+                if (Temp>M.getMaxC()){
+                    int sobra = Temp-M.getMaxC();
+                    Temp = Temp-sobra;
+                    System.out.println("COFRE SE A LLENADO");
+                }
+                M.setCobre(Temp);
+                System.out.println("Fase "+FuncionesMenu.fase);
+                System.out.println("Nuevo Valor Cobre: " + M.getCobre());
+            }else{
+                System.out.println("Cobre: " + M.getOro());
+                System.out.println("COFRE DE Cobre LLENO, tendra que gastar Cobre antes de poder seguir generando");
+            }
         }
         else{
-            System.out.println("La edificación Cobre ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
+            System.out.println("La edificación Oro ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
         }
     }
     
