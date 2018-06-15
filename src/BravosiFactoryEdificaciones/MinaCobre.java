@@ -17,7 +17,7 @@ import Menu.FuncionesMenu;
  * @author aacm12
  */
 public class MinaCobre implements EdificacionesBravosi {
-    Bravos M = new Bravos();
+    Bravos B = new Bravos();
     private int vida=500;
     private int Temp, Inicial;
 
@@ -41,20 +41,20 @@ public class MinaCobre implements EdificacionesBravosi {
     @Override
     public void GenerarRecurso() {
         if (FuncionesMenu.fase > (Inicial + 2)) {
-            Temp = M.getCobre();
-            if (Temp<M.getMaxC()){
-                System.out.println("Cobre: " + M.getCobre());
-                Temp += 200;
-                if (Temp>M.getMaxC()){
-                    int sobra = Temp-M.getMaxC();
+            Temp = B.getCobre();
+            if (Temp<B.getMaxC()){
+                System.out.println("Cobre: " + B.getCobre());
+                Temp += 400;
+                if (Temp>B.getMaxC()){
+                    int sobra = Temp-B.getMaxC();
                     Temp = Temp-sobra;
                     System.out.println("COFRE SE A LLENADO");
                 }
-                M.setCobre(Temp);
+                B.setCobre(Temp);
                 System.out.println("Fase "+FuncionesMenu.fase);
-                System.out.println("Nuevo Valor Cobre: " + M.getCobre());
+                System.out.println("Nuevo Valor Cobre: " + B.getCobre());
             }else{
-                System.out.println("Cobre: " + M.getOro());
+                System.out.println("Cobre: " + B.getOro());
                 System.out.println("COFRE DE Cobre LLENO, tendra que gastar Cobre antes de poder seguir generando");
             }
         }
