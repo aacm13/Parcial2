@@ -41,7 +41,7 @@ public class MinaOro implements EdificacionesMandalorian {
             Temp = M.getOro();
             if (Temp<M.getMaxO()){
                 System.out.println("Oro: " + M.getOro());
-                Temp += 200;
+                Temp += 100;
                 if (Temp>M.getMaxO()){
                     int sobra = Temp-M.getMaxO();
                     Temp = Temp-sobra;

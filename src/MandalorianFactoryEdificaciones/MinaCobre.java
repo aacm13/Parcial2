@@ -41,7 +41,7 @@ public class MinaCobre implements EdificacionesMandalorian {
             Temp = M.getCobre();
             if (Temp<M.getMaxC()){
                 System.out.println("Cobre: " + M.getCobre());
-                Temp += 200;
+                Temp += 400;
                 if (Temp>M.getMaxC()){
                     int sobra = Temp-M.getMaxC();
                     Temp = Temp-sobra;
