@@ -10,6 +10,6 @@ package MandalorianFactoryEdificaciones;
  * @author aacm12
  */
 public interface EdificacionesMandalorian {
-    public int GenerarRecurso();
+    public void GenerarRecurso();
 
 }

@@ -34,7 +34,7 @@ public class MinaPlata implements EdificacionesBravosi {
     
 
     @Override
-    public int GenerarRecurso() {
+    public void GenerarRecurso() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

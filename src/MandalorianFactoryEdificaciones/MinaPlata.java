@@ -5,15 +5,20 @@
  */
 package MandalorianFactoryEdificaciones;
 
+import AbstractFactoryMandalore.Mandalore;
+import Menu.FuncionesMenu;
+
 /**
  *
  * @author aacm12
  */
 public class MinaPlata implements EdificacionesMandalorian {
-    
-    private int vida;
+    Mandalore M = new Mandalore();
+    private int vida=1000;
+    private int Temp, Inicial;
 
     public MinaPlata() {
+        Inicial = FuncionesMenu.fase;
     }
 
     public MinaPlata(int vida) {
@@ -30,8 +35,18 @@ public class MinaPlata implements EdificacionesMandalorian {
     
 
     @Override
-    public int GenerarRecurso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void GenerarRecurso() {
+        if (FuncionesMenu.fase > (Inicial + 2)) {
+            System.out.println("Cantidad de plata actual " + M.getPlata());
+            Temp = M.getPlata();
+            //después de ciertas fases      ESTO SE ARREGLA CON UN WHILE O FOR, O INCLUSIVE IF...
+            Temp += (Temp * 0.2);
+            M.setPlata(Temp);
+            System.out.println("después de "+FuncionesMenu.fase+" fases ahora posee: " + M.getPlata());
+        }
+        else{
+            System.out.println("La edificación Plata ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
+        }
     }
     
 }

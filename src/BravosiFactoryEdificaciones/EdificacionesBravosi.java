@@ -14,6 +14,6 @@ import TelekhinesFactoryEdificaciones.*;
  * @author aacm12
  */
 public interface EdificacionesBravosi {
-    public int GenerarRecurso();
+    public void GenerarRecurso();
 
 }

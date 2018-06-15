@@ -12,6 +12,6 @@ package TelekhinesFactoryEdificaciones;
  * @author aacm12
  */
 public interface EdificacionesTelekhines {
-    public int GenerarRecurso();
+    public void GenerarRecurso();
 
 }

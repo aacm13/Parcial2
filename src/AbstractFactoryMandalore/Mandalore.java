@@ -19,12 +19,22 @@ import java.util.*;
 //      --1+ turno en tiempo de construccion de edificaciones
 public class Mandalore {
     //Recursos Iniciales, tiene una quinta parte del total maximo de la primera base
-    private int Cobre = 2000;
-    private int Plata = 1000;
-    private int Oro = 600;
-    private int maxC = 10000;//Max Combre
-    private int maxP = 5000;//Max Plata
-    private int maxO = 3000;//Max Oro
+    private int Cobre;
+    private int Plata;
+    private int Oro;
+    private int maxC;//Max Combre
+    private int maxP;//Max Plata
+    private int maxO;//Max Oro
+
+    public Mandalore() {
+        Cobre = 2000;
+        Plata = 1000;
+        Oro = 600;
+        maxC = 10000;//Max Combre
+        maxP = 5000;//Max Plata
+        maxO = 3000;//Max Oro
+    }
+    
     
     private ArrayList<EdificacionesMandalorian> EdificacionesMandalorian = new
          ArrayList<EdificacionesMandalorian>();
@@ -62,7 +72,7 @@ public class Mandalore {
         this.Cobre = Cobre;
     }
 
-    public void setPalta(int Plata) {
+    public void setPlata(int Plata) {
         this.Plata = Plata;
     }
 
