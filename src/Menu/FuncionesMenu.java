@@ -73,21 +73,20 @@ public class FuncionesMenu {
 
             } else if (opcionRaza == 3) {
                 muestraDatosUsuario(nombre, "Raza Esqueletos");
-                //System.out.println("Esto mandará a llamar la factory de esta raza y blabla x 3");
                 Telekhines T = new Telekhines();
                 input.nextLine(); //Soluciona el problema de limpiar el buffer
-                //Dispongo tando de \n (salto de línea) como de la creación de tabs \t ...
+                
                 System.out.println("Recursos Iniciales:\n" +
                         "Cobre: " + T.getCobre() +
                         "\nPlata: " + T.getMaxP() +
                         "\nOro: " + T.getOro());
-                //Líneas para los turnos...
+                
                 if (a == 1) {
                     Jug1 = 3;
                 } else {
                     Jug2 = 4;
                 }
-                //Ejecuto la función del contador de a para pedir un último usuario...
+                
                 a += 1;
             }
 
@@ -105,16 +104,23 @@ public class FuncionesMenu {
     }
 
     public static void InstanciacionEdificacionesSegunRazaJ2() {
-        int opcionSubMenuTurnos, opcionEdif, opcionAtaque;
-        Scanner TJ = new Scanner(System.in);
-        System.out.println("1. Crear edificaciones\n2. Atacar [Sub menú si desea hacerlo con un Super Soldado o milicia normal]");
-                opcionSubMenuTurnos = TJ.nextInt();
-                switch (opcionSubMenuTurnos) {
+        int opcSM, opcE, opcA;
+        Scanner input = new Scanner(System.in);
+        System.out.println("1. Crear edificaciones"
+                + "\n2. Atacar");
+                opcSM = input.nextInt();
+                switch (opcSM) {
                     case 1:
                         System.out.println("Crea edificaciones");
-                        System.out.println("Seleccione qué edificación desea crear:\n1. Edificación para recurso 1\n2. Edificación para recurso 2\n3. Edificación para recurso 3\n4. Edificación para entrenar soldados y escuadrones\n5. Edificación para construir Vehículos tipo 1\n6. Edificación para construir Vehículos tipo 2");
-                        opcionEdif = TJ.nextInt();
-                        switch(opcionEdif){
+                        System.out.println("Seleccione qué edificación desea crear:"
+                                + "\n1. recurso 1"
+                                + "\n2. recurso 2"
+                                + "\n3. recurso 3"
+                                + "\n4. ntrenar soldados y escuadrones"
+                                + "\n5. construir Vehículos tipo 1"
+                                + "\n6. construir Vehículos tipo 2");
+                        opcE = input.nextInt();
+                        switch(opcE){
                             case 1:
                                 System.out.println("Instancio y creo el objeto 1 según raza, lo agrego al arreglo..."); //Con o sin break, regreso al menú principal...
                                 break;
@@ -140,23 +146,26 @@ public class FuncionesMenu {
                         break;
                     case 2:
                         System.out.println("Por favor, seleccione con qué desea atacar: ");
-                        System.out.println("1. Milia + talRaza\n2. Super Soldado + segunRaza\n3. Vehículo Terrestre + segúnRaza\n4. Vehículo Aéreo + según raza");
-                        opcionAtaque = TJ.nextInt();
-                        switch(opcionAtaque){
+                        System.out.println("1. Milia + talRaza"
+                                + "\n2. Super Soldado + segunRaza"
+                                + "\n3. Vehículo Terrestre + segúnRaza"
+                                + "\n4. Vehículo Aéreo + según raza");
+                        opcA = input.nextInt();
+                        switch(opcA){
                             case 1:
                                 System.out.println("Ataco a la milica de tal raza N");
                                 break;
                             case 2:
-                                System.out.println("Atacó al super soldado de tal raza N");
+                                System.out.println("Atacó a un especialista");
                                 break;
                             case 3:
                                 System.out.println("Atacó a tal vehículo de la raza");
                                 break;
                             case 4:
-                                System.out.println("Atacó a tal vehículo aéreo...");
+                                System.out.println("Ataco a un vehiculo Aereo");
                                 break;
                             default:
-                                System.out.println("Escoja una opción válida");
+                                System.out.println("Intente otra vez, lo ingresado no es valido");
                                 break;
                         }
                         break;
@@ -164,7 +173,7 @@ public class FuncionesMenu {
                         System.out.println("Se sale del buckle y que me tire al segund sub while");
                         break;
                     default:
-                        System.out.println("Escoja opción válida");
+                        System.out.println("Intente otra vez, lo ingresado no es valido");
                         break;
                 }
 
