@@ -6,9 +6,9 @@
 package AbstractFactoryTelekhines;
 
 
-import EdifTelekhinesFactory.EdificacionesTelekhines;
-import SoldaTelekhinesiFactory.SoldadosTelekhines;
-import VehTelekhinesFactory.VehiculosTelekhines;
+import TelekhinesFactoryEdificaciones.EdificacionesTelekhines;
+import TelekhinesFactorySoldados.Guerreros;
+import TelekhinesFactoryVehiculos.VehiculosTelekhines;
 
 /**
  *
@@ -21,6 +21,6 @@ public abstract class AbstractFactoryTelekhines {
 
     public abstract VehiculosTelekhines getVehiculoTelekhines(String tipo);
 
-    public abstract SoldadosTelekhines getSoldadoTelekhines(String tipo);
+    public abstract Guerreros getSoldadoTelekhines(String tipo);
 
 }

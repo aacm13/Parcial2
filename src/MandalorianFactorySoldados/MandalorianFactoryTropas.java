@@ -30,7 +30,7 @@ public class MandalorianFactoryTropas extends AbstractFactoryMandalorian{
          switch(tipo){
             case "NiteOwels":
                 return new NiteOwls();
-            case "uperCommando": //De este solo podrá haber uno en batalla **DEBERÉ HACER TAL VALIDACIÓN
+            case "SuperCommando": //De este solo podrá haber uno en batalla **DEBERÉ HACER TAL VALIDACIÓN
                 return new SuperCommando();
         }
         return null;
