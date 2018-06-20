@@ -23,13 +23,12 @@ public class EdificacionBravosiFactory extends AbstractFactoryBravosi {
             case "Edif recurso Plata":
                 return new MinaPlata(); //Debo colocar una opción de recolectar recuros...
             case "Edif recurso Oro":
-                System.out.println("..SE EJECUTA ESTO SIN PROBLEMAS");
                 return new MinaOro(); //generará el recurso automáticamente...
-            case "Edif entrenamiento Wizard Saints y Raiders": //**** luego deberé amarrar que si creo unos soldados no pueden existir sin esta edif...
+            case "Edif entrenamiento Bounty Hunters y Militia Civil": 
                 return new BravosiCantina();
-            case "Edif entrenamiento Dragon": //Vehiculo aéreo
+            case "Edif entrenamiento Destroyer": //Vehiculo aéreo
                 return new Techistri();
-            case "Edif entrenamiento ShadowFiend": //Vehiculo terrestre
+            case "Edif entrenamiento F22_Raptor": //Vehiculo terrestre
                 return new ShipYard();
         }
         return null;

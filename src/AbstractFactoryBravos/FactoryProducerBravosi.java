@@ -18,7 +18,7 @@ public class FactoryProducerBravosi {
             case "Edificaciones":
                 return new EdificacionBravosiFactory(); //retornará el valor seleccionado de la edificación pedida...
             case "Vehiculos":
-                return null;
+                return new BravosiFactoryVehiculos();
             case "Soldados":
                 return new BravosiFactoryMilitia(); //retornará una nueva opcion de qué tipo de soldado utilizar.
             

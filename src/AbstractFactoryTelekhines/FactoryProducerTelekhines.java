@@ -6,10 +6,9 @@
 package AbstractFactoryTelekhines;
 
 import TelekhinesFactoryEdificaciones.EdificacionTelekhinesFactory;
-import TelekhinesFactoryEdificaciones.EdificacionesTelekhines;
-import TelekhinesFactorySoldados.Guerreros;
 import TelekhinesFactorySoldados.TelekhinesFactoryGuerreros;
-import TelekhinesFactoryVehiculos.VehiculosTelekhines;
+import TelekhinesFactoryVehiculos.TelekhinesFactoryVehiculos;
+
 /**
  *
  * @author aacm12
@@ -20,7 +19,7 @@ public class FactoryProducerTelekhines {
             case "Edificaciones":
                 return new EdificacionTelekhinesFactory(); //retornará el valor seleccionado de la edificación pedida...
             case "Vehiculos":
-                return null;
+                return new TelekhinesFactoryVehiculos();
             case "Soldados":
                 return new TelekhinesFactoryGuerreros(); //retornará una nueva opcion de qué tipo de soldado utilizar.
             

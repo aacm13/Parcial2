@@ -18,7 +18,7 @@ public class FactoryProducerMandalorians {
             case "Edificaciones":
                 return new EdificacionMandalorianFactory(); //retornará el valor seleccionado de la edificación pedida...
             case "Vehiculos":
-                return null;
+                return new MandalorianFactoryVehiculos();
             case "Soldados":
                 return new MandalorianFactoryTropas(); //retornará una nueva opcion de qué tipo de soldado utilizar.
             
