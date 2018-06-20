@@ -52,12 +52,12 @@ public class MinaCobre implements EdificacionesTelekhines {
                 System.out.println("Fase "+FuncionesMenu.fase);
                 System.out.println("Nuevo Valor Cobre: " + T.getCobre());
             }else{
-                System.out.println("Cobre: " + T.getOro());
+                System.out.println("Cobre: " + T.getCobre());
                 System.out.println("COFRE DE Cobre LLENO, tendra que gastar Cobre antes de poder seguir generando");
             }
         }
         else{
-            System.out.println("La edificación Oro ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
+            System.out.println("La edificación Cobre ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
         }
     }
     

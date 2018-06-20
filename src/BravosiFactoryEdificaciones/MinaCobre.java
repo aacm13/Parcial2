@@ -54,7 +54,7 @@ public class MinaCobre implements EdificacionesBravosi {
                 System.out.println("Fase "+FuncionesMenu.fase);
                 System.out.println("Nuevo Valor Cobre: " + B.getCobre());
             }else{
-                System.out.println("Cobre: " + B.getOro());
+                System.out.println("Cobre: " + B.getCobre());
                 System.out.println("COFRE DE Cobre LLENO, tendra que gastar Cobre antes de poder seguir generando");
             }
         }
