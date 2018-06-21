@@ -11,7 +11,7 @@ import MandalorianFactoryVehiculos.VehiculosMandalorian;
 
 /**
  *
- * @author Josué González <00034715@uca.edu.sv>
+ * @author aacm12
  */
 public class EdificacionMandalorianFactory extends AbstractFactoryMandalorian {
 

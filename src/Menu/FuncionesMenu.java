@@ -32,7 +32,7 @@ public class FuncionesMenu {
             System.out.println("Nombre de usuario");
             nombre = input.nextLine();
 
-            //Ahora pido el tipo de raza con la que desea jugar
+            //raza
             System.out.println("Facciones:");
             System.out.println("1. Mandalorians\n2. Bravosi\n3. Telkhines");
             opcionRaza = input.nextInt();

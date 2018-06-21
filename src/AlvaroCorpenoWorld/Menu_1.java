@@ -51,9 +51,9 @@ public class Menu_1 {
         Mandalore M = new Mandalore();
         Bravos B = new Bravos();
         Telekhines T = new Telekhines();
-        MilitiaCivil MGH = new MilitiaCivil();
-        NiteOwls MO = new NiteOwls();
-        Raider MEs = new Raider();
+        MilitiaCivil solda = new MilitiaCivil();
+        NiteOwls militia = new NiteOwls();
+        Raider raid = new Raider();
 
         String nombre, nombreJ1 = null, nombreJ2 = null;
         int OSMT, OE, OA, a = 1, OpcR, OpcRJ1 = 0, OpcRJ2 = 0, Mejora;
@@ -66,7 +66,9 @@ public class Menu_1 {
             nombre = input.nextLine();
             //Ahora pido el tipo de raza con la que desea jugar
             System.out.println("A continuación, escoja la raza que desea...\n de momento solo puede escoger la raza humanos guerreros");
-            System.out.println("1. Mandalorian\n2. Bravosi\n3. Telkhines");
+            System.out.println("1. Mandalorian"
+                    + "\n2. Bravosi"
+                    + "\n3. Telkhines");
             OpcR = input.nextInt();
             switch (OpcR) {
                 case 1:
@@ -238,7 +240,7 @@ public class Menu_1 {
                                     case 4:
 
                                         if (M.getCobre() >= 500 && M.getOro() >= 1500 && M.getPlata() >= 750) {
-                                            EdificacionesMandalorian EMO = new MandalorianBarracks();
+                                            EdificacionesMandalorian Emilitia = new MandalorianBarracks();
                                             System.out.println("Valores de fondos ANTES de Compra:");
                                             System.out.println("ORO:" + M.getOro());
                                             System.out.println("COBRE:" + M.getCobre());
@@ -249,7 +251,7 @@ public class Menu_1 {
                                             int Plata = TempP - 1500;
                                             int TempO = M.getOro();
                                             int Oro = TempO - 750;
-                                            M.getEdificacionesMandalorian().add(EMO);
+                                            M.getEdificacionesMandalorian().add(Emilitia);
                                             System.out.println(M.getEdificacionesMandalorian().size());
                                             M.setOro(Oro);
                                             M.setCobre(Cobre);
@@ -287,7 +289,7 @@ public class Menu_1 {
                                             System.out.println("COBRE:" + M.getCobre());
                                             System.out.println("PLATA:" + M.getPlata());
                                         } else {
-                                            System.out.println("No tiene suficientes fundos");
+                                            System.out.println("No tiene suficientes fondos");
                                         }
 
                                         break;
@@ -314,7 +316,7 @@ public class Menu_1 {
                                             System.out.println("COBRE:" + M.getCobre());
                                             System.out.println("PLATA:" + M.getPlata());
                                         } else {
-                                            System.out.println("No tiene suficientes fundos");
+                                            System.out.println("No tiene suficientes fondos");
                                         }
                                         break;
                                     default:
@@ -350,8 +352,8 @@ public class Menu_1 {
                                 break;
                             case 3:
                                 System.out.println("Atacar\nSeleccione a quién desea atacar...");
-                                MGH.damage(MO.attack());
-                                System.out.println(MGH.getVida());
+                                solda.damage(militia.attack());
+                                System.out.println(solda.getVida());
                                 break;
                             case 4:
                                 System.out.println("Verificar cantidad de recursos y mejorar el CENTRO DE MANDO");
@@ -453,7 +455,7 @@ public class Menu_1 {
                                     case 4:
 
                                         if (B.getCobre() >= 500 && B.getOro() >= 1500 && B.getPlata() >= 750) {
-                                            EdificacionesBravosi EMO = new BravosiCantina();
+                                            EdificacionesBravosi Emilitia = new BravosiCantina();
                                             System.out.println("Valores de fondos ANTES de Compra:");
                                             System.out.println("ORO:" + B.getOro());
                                             System.out.println("COBRE:" + B.getCobre());
@@ -464,7 +466,7 @@ public class Menu_1 {
                                             int Plata = TempP - 1500;
                                             int TempO = B.getOro();
                                             int Oro = TempO - 750;
-                                            B.getEdificacionesBravosi().add(EMO);
+                                            B.getEdificacionesBravosi().add(Emilitia);
                                             System.out.println(B.getEdificacionesBravosi().size());
                                             B.setOro(Oro);
                                             B.setCobre(Cobre);
@@ -502,7 +504,7 @@ public class Menu_1 {
                                             System.out.println("COBRE:" + B.getCobre());
                                             System.out.println("PLATA:" + B.getPlata());
                                         } else {
-                                            System.out.println("No tiene suficientes fundos");
+                                            System.out.println("No tiene suficientes fondos");
                                         }
 
                                         break;
@@ -529,7 +531,7 @@ public class Menu_1 {
                                             System.out.println("COBRE:" + B.getCobre());
                                             System.out.println("PLATA:" + B.getPlata());
                                         } else {
-                                            System.out.println("No tiene suficientes fundos");
+                                            System.out.println("No tiene suficientes fondos");
                                         }
                                         break;
                                     default:
@@ -564,8 +566,8 @@ public class Menu_1 {
                                 break;
                             case 3:
                                 System.out.println("Atacar\nSeleccione a quién desea atacar..."); //Puedo poner afuera de todo esto el muestreo de los recursos actuales...
-                                MO.damage(MGH.attack());
-                                System.out.println(MO.getVida());
+                                militia.damage(solda.attack());
+                                System.out.println(militia.getVida());
                                 break;
                             case 4:
                                 System.out.println("Verificar cantidad de recursos y mejorar el CENTRO DE MANDO");
@@ -677,7 +679,7 @@ public class Menu_1 {
                                     case 4:
 
                                         if (B.getCobre() >= 1000 && B.getOro() >= 500 && B.getPlata() >= 750) {
-                                            EdificacionesTelekhines EMO = new TelekhinesHall();
+                                            EdificacionesTelekhines Emilitia = new TelekhinesHall();
                                             System.out.println("Valores de fondos ANTES de Compra:");
                                             System.out.println("ORO:" + T.getOro());
                                             System.out.println("COBRE:" + T.getCobre());
@@ -688,7 +690,7 @@ public class Menu_1 {
                                             int Plata = TempP - 1500;
                                             int TempO = B.getOro();
                                             int Oro = TempO - 750;
-                                            T.getEdificacionesTelekhines().add(EMO);
+                                            T.getEdificacionesTelekhines().add(Emilitia);
                                             System.out.println(T.getEdificacionesTelekhines().size());
                                             T.setOro(Oro);
                                             T.setCobre(Cobre);
@@ -726,7 +728,7 @@ public class Menu_1 {
                                             System.out.println("COBRE:" + T.getCobre());
                                             System.out.println("PLATA:" + T.getPlata());
                                         } else {
-                                            System.out.println("No tiene suficientes fundos");
+                                            System.out.println("No tiene suficientes fondos");
                                         }
 
                                         break;
@@ -753,7 +755,7 @@ public class Menu_1 {
                                             System.out.println("COBRE:" + T.getCobre());
                                             System.out.println("PLATA:" + T.getPlata());
                                         } else {
-                                            System.out.println("No tiene suficientes fundos");
+                                            System.out.println("No tiene suficientes fondos");
                                         }
                                         break;
                                     default:
@@ -788,8 +790,8 @@ public class Menu_1 {
                                 break;
                             case 3:
                                 System.out.println("Atacar\nSeleccione a quién desea atacar..."); //Puedo poner afuera de todo esto el muestreo de los recursos actuales...
-                                MO.damage(MGH.attack());
-                                System.out.println(MO.getVida());
+                                militia.damage(solda.attack());
+                                System.out.println(militia.getVida());
                                 break;
                             case 4:
                                 System.out.println("Verificar cantidad de recursos y mejorar el CENTRO DE MANDO");
@@ -825,7 +827,7 @@ public class Menu_1 {
                 }
                 Fase();
             }
-        } while (MGH.getVida() > 0 || MO.getVida() > 0 || MEs.getVida() > 0);
+        } while (solda.getVida() > 0 || militia.getVida() > 0 || raid.getVida() > 0);
 
     }
 
