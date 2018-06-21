@@ -5,15 +5,16 @@
  */
 package BravosiFactoryVehiculos;
 
-
-
 /**
  *
  * @author aacm12
  */
 public interface VehiculosBravosi {
+
     public int vida(int EnemyDamage);
+
     public int attack();
+
     public void damage(int EnemyDamage);
-    
+
 }

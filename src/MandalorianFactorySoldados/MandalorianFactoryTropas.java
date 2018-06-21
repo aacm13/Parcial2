@@ -13,7 +13,7 @@ import MandalorianFactoryVehiculos.VehiculosMandalorian;
  *
  * @author aacm12
  */
-public class MandalorianFactoryTropas extends AbstractFactoryMandalorian{
+public class MandalorianFactoryTropas extends AbstractFactoryMandalorian {
 
     @Override
     public EdificacionesMandalorian getEdificacionMandalorian(String tipo) {
@@ -27,7 +27,7 @@ public class MandalorianFactoryTropas extends AbstractFactoryMandalorian{
 
     @Override
     public Tropas getSoldadoMandalorian(String tipo) {
-         switch(tipo){
+        switch (tipo) {
             case "NiteOwels":
                 return new NiteOwls();
             case "SuperCommando": //De este solo podrá haber uno en batalla **DEBERÉ HACER TAL VALIDACIÓN
@@ -35,5 +35,5 @@ public class MandalorianFactoryTropas extends AbstractFactoryMandalorian{
         }
         return null;
     }
-    
+
 }

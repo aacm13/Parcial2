@@ -5,14 +5,14 @@
  */
 package TelekhinesFactoryEdificaciones;
 
-
-
 /**
  *
  * @author aacm12
  */
 public interface EdificacionesTelekhines {
+
     public void GenerarRecurso();
+
     public void guardar();
 
 }

@@ -9,8 +9,6 @@ import AbstractFactoryTelekhines.AbstractFactoryTelekhines;
 import TelekhinesFactorySoldados.Guerreros;
 import TelekhinesFactoryVehiculos.VehiculosTelekhines;
 
-
-
 /**
  *
  * @author aacm12
@@ -46,6 +44,5 @@ public class EdificacionTelekhinesFactory extends AbstractFactoryTelekhines {
     public Guerreros getSoldadoTelekhines(String tipo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 
 }

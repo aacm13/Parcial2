@@ -9,8 +9,8 @@ package MandalorianFactoryEdificaciones;
  *
  * @author aacm12
  */
-public class MandalorianBarracks implements EdificacionesMandalorian{
-    
+public class MandalorianBarracks implements EdificacionesMandalorian {
+
     private int vida;
 
     public MandalorianBarracks() {
@@ -27,10 +27,10 @@ public class MandalorianBarracks implements EdificacionesMandalorian{
     public void setVida(int vida) {
         this.vida = vida;
     }
-    
+
     @Override
     public void GenerarRecurso() {
-        
+
     }
-    
+
 }

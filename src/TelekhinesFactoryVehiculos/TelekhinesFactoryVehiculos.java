@@ -9,7 +9,6 @@ import AbstractFactoryTelekhines.AbstractFactoryTelekhines;
 import TelekhinesFactoryEdificaciones.EdificacionesTelekhines;
 import TelekhinesFactorySoldados.Guerreros;
 
-
 /**
  *
  * @author aacm12
@@ -23,9 +22,9 @@ public class TelekhinesFactoryVehiculos extends AbstractFactoryTelekhines {
 
     @Override
     public VehiculosTelekhines getVehiculoTelekhines(String tipo) {
-        switch(tipo){
+        switch (tipo) {
             case "ShadowFiend":
-                return new ShadowFiend() ;
+                return new ShadowFiend();
             case "Dragon": //De este solo podrá haber uno en batalla **DEBERÉ HACER TAL VALIDACIÓN
                 return new Dragon();
         }
@@ -37,6 +36,4 @@ public class TelekhinesFactoryVehiculos extends AbstractFactoryTelekhines {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
 }

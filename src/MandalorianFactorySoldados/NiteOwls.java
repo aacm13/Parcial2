@@ -12,8 +12,9 @@ import java.util.*;
  * @author aacm12
  */
 //
-public class NiteOwls implements Tropas{
-    private int Vida = 100+20; //toda tropa Mandalorian tiene +20 de vida
+public class NiteOwls implements Tropas {
+
+    private int Vida = 100 + 20; //toda tropa Mandalorian tiene +20 de vida
     private String nombre;
     private Random rand = new Random();
 
@@ -39,8 +40,7 @@ public class NiteOwls implements Tropas{
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
-    
-    
+
     @Override
     public int vida(int EnemyDamage) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -48,17 +48,17 @@ public class NiteOwls implements Tropas{
 
     @Override
     public int attack() {
-        int damage= 20+15;//todas las tropas Mandalorian hacen +15 puntos de daño
+        int damage = 20 + 15;//todas las tropas Mandalorian hacen +15 puntos de daño
         int prob = rand.nextInt(10);
-        if (prob>2){//por el hecho que son grandes guerreros tienen bastante probabilidad de hacer daño
+        if (prob > 2) {//por el hecho que son grandes guerreros tienen bastante probabilidad de hacer daño
             return damage;
         }
-        return damage/3;//si fallan entonces solo hacen un tercio del daño
+        return damage / 3;//si fallan entonces solo hacen un tercio del daño
     }
 
     @Override
     public void damage(int EnemyDamage) {
         this.Vida -= EnemyDamage;
     }
-    
+
 }

@@ -14,17 +14,18 @@ import TelekhinesFactoryVehiculos.TelekhinesFactoryVehiculos;
  * @author aacm12
  */
 public class FactoryProducerTelekhines {
-    public static AbstractFactoryTelekhines getFactoryTelekhines(String tipo){
-        switch(tipo) {
+
+    public static AbstractFactoryTelekhines getFactoryTelekhines(String tipo) {
+        switch (tipo) {
             case "Edificaciones":
                 return new EdificacionTelekhinesFactory(); //retornará el valor seleccionado de la edificación pedida...
             case "Vehiculos":
                 return new TelekhinesFactoryVehiculos();
             case "Soldados":
                 return new TelekhinesFactoryGuerreros(); //retornará una nueva opcion de qué tipo de soldado utilizar.
-            
+
         }
         return null;
-        
+
     }
 }

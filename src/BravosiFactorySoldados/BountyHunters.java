@@ -5,7 +5,6 @@
  */
 package BravosiFactorySoldados;
 
-
 import java.util.*;
 
 /**
@@ -13,10 +12,12 @@ import java.util.*;
  * @author aacm12
  */
 //
-public class BountyHunters implements Militia{
+public class BountyHunters implements Militia {
+
     private int Vida = 200;
     private String nombre;
     private Random rand = new Random();
+
     public BountyHunters() {
     }
 
@@ -39,9 +40,7 @@ public class BountyHunters implements Militia{
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
-    
-    
-    
+
     @Override
     public int vida(int EnemyDamage) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -49,17 +48,17 @@ public class BountyHunters implements Militia{
 
     @Override
     public int attack() {
-        int damage= 40;
+        int damage = 40;
         int prob = rand.nextInt(10);
-        if (prob>3){//
+        if (prob > 3) {//
             return damage;
         }
-        return damage/2;//si fallan entonces solo hacen la mitad del daño
+        return damage / 2;//si fallan entonces solo hacen la mitad del daño
     }
 
     @Override
     public void damage(int EnemyDamage) {
         this.Vida -= EnemyDamage;
     }
-    
+
 }

@@ -24,7 +24,7 @@ public class EdificacionBravosiFactory extends AbstractFactoryBravosi {
                 return new MinaPlata(); //Debo colocar una opción de recolectar recuros...
             case "Edif recurso Oro":
                 return new MinaOro(); //generará el recurso automáticamente...
-            case "Edif entrenamiento Bounty Hunters y Militia Civil": 
+            case "Edif entrenamiento Bounty Hunters y Militia Civil":
                 return new BravosiCantina();
             case "Edif entrenamiento Destroyer": //Vehiculo aéreo
                 return new Techistri();
@@ -43,6 +43,5 @@ public class EdificacionBravosiFactory extends AbstractFactoryBravosi {
     public Militia getSoldadoBravosi(String tipo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
 
 }

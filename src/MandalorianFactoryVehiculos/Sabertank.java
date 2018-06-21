@@ -12,7 +12,8 @@ import java.util.Random;
  * @author acm12
  */
 public class Sabertank implements VehiculosMandalorian {
-    private int Vida = 300+20; //toda tropa Mandalorian tiene +20 de vida
+
+    private int Vida = 300 + 20; //toda tropa Mandalorian tiene +20 de vida
     private String nombre;
     private Random rand = new Random();
 
@@ -38,17 +39,15 @@ public class Sabertank implements VehiculosMandalorian {
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
-    
-    
-    
+
     @Override
     public int attack() {
-        int damage= 60+15;//todas las tropas Mandalorian hacen +15 puntos de daño
+        int damage = 60 + 15;//todas las tropas Mandalorian hacen +15 puntos de daño
         int prob = rand.nextInt(10);
-        if (prob>2){//por el hecho que son grandes guerreros tienen bastante probabilidad de hacer daño
+        if (prob > 2) {//por el hecho que son grandes guerreros tienen bastante probabilidad de hacer daño
             return damage;
         }
-        return damage/3;//si fallan entonces solo hacen un tercio del daño
+        return damage / 3;//si fallan entonces solo hacen un tercio del daño
     }
 
     @Override
@@ -60,6 +59,5 @@ public class Sabertank implements VehiculosMandalorian {
     public void damage(int EnemyDamage) {
         this.Vida -= EnemyDamage;
     }
-    
-    
+
 }

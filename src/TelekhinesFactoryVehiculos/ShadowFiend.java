@@ -5,7 +5,6 @@
  */
 package TelekhinesFactoryVehiculos;
 
-
 import java.util.Random;
 
 /**
@@ -13,7 +12,8 @@ import java.util.Random;
  * @author acm12
  */
 public class ShadowFiend implements VehiculosTelekhines {
-    private int Vida = 300-20; //toda tropa Telekhines tiene -20 de vida
+
+    private int Vida = 300 - 20; //toda tropa Telekhines tiene -20 de vida
     private String nombre;
     private Random rand = new Random();
 
@@ -39,17 +39,15 @@ public class ShadowFiend implements VehiculosTelekhines {
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
-    
-    
-    
+
     @Override
     public int attack() {
-        int damage= 60+20;//todas las tropas Telekhines hacen +20 puntos de daño
+        int damage = 60 + 20;//todas las tropas Telekhines hacen +20 puntos de daño
         int prob = rand.nextInt(10);
-        if (prob>4){//por el hecho que muy buenas armas tienen acceptable probabilidad de hacer daño
+        if (prob > 4) {//por el hecho que muy buenas armas tienen acceptable probabilidad de hacer daño
             return damage;
         }
-        return damage/3;//si fallan entonces solo hacen un tercio del daño
+        return damage / 3;//si fallan entonces solo hacen un tercio del daño
     }
 
     @Override
@@ -61,6 +59,5 @@ public class ShadowFiend implements VehiculosTelekhines {
     public void damage(int EnemyDamage) {
         this.Vida -= EnemyDamage;
     }
-    
-    
+
 }

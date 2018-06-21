@@ -9,13 +9,11 @@ import AbstractFactoryTelekhines.AbstractFactoryTelekhines;
 import TelekhinesFactoryEdificaciones.EdificacionesTelekhines;
 import TelekhinesFactoryVehiculos.VehiculosTelekhines;
 
-
-
 /**
  *
  * @author aacm12
  */
-public class TelekhinesFactoryGuerreros extends AbstractFactoryTelekhines{
+public class TelekhinesFactoryGuerreros extends AbstractFactoryTelekhines {
 
     @Override
     public EdificacionesTelekhines getEdificacionTelekhines(String tipo) {
@@ -29,7 +27,7 @@ public class TelekhinesFactoryGuerreros extends AbstractFactoryTelekhines{
 
     @Override
     public Guerreros getSoldadoTelekhines(String tipo) {
-        switch(tipo){
+        switch (tipo) {
             case "Raiders":
                 return new Raider();
             case "WizardSaint": //De este solo podrá haber uno en batalla **DEBERÉ HACER TAL VALIDACIÓN
@@ -38,8 +36,4 @@ public class TelekhinesFactoryGuerreros extends AbstractFactoryTelekhines{
         return null;
     }
 
-    
-
-    
-    
 }

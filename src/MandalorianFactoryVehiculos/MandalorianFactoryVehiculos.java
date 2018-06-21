@@ -8,6 +8,7 @@ package MandalorianFactoryVehiculos;
 import AbstractFactoryMandalore.AbstractFactoryMandalorian;
 import MandalorianFactoryEdificaciones.EdificacionesMandalorian;
 import MandalorianFactorySoldados.Tropas;
+
 /**
  *
  * @author aacm12
@@ -21,9 +22,9 @@ public class MandalorianFactoryVehiculos extends AbstractFactoryMandalorian {
 
     @Override
     public VehiculosMandalorian getVehiculoMandalorian(String tipo) {
-        switch(tipo){
+        switch (tipo) {
             case "Sabertank":
-                return new Sabertank() ;
+                return new Sabertank();
             case "Basilisk": //De este solo podrá haber uno en batalla **DEBERÉ HACER TAL VALIDACIÓN
                 return new Basilisk();
         }
@@ -34,6 +35,5 @@ public class MandalorianFactoryVehiculos extends AbstractFactoryMandalorian {
     public Tropas getSoldadoMandalorian(String tipo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
 }

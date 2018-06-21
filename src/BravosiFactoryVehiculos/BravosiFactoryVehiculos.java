@@ -9,9 +9,6 @@ import AbstractFactoryBravos.AbstractFactoryBravosi;
 import BravosiFactoryEdificaciones.EdificacionesBravosi;
 import BravosiFactorySoldados.Militia;
 
-
-
-
 /**
  *
  * @author aacm12
@@ -25,9 +22,9 @@ public class BravosiFactoryVehiculos extends AbstractFactoryBravosi {
 
     @Override
     public VehiculosBravosi getVehiculoBravosi(String tipo) {
-        switch(tipo){
+        switch (tipo) {
             case "ShadowFiend":
-                return new Destroyer() ;
+                return new Destroyer();
             case "Dragon": //De este solo podrá haber uno en batalla **DEBERÉ HACER TAL VALIDACIÓN
                 return new F22_Raptor();
         }
@@ -39,7 +36,4 @@ public class BravosiFactoryVehiculos extends AbstractFactoryBravosi {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
-    
 }

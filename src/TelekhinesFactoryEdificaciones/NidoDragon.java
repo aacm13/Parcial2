@@ -5,15 +5,14 @@
  */
 package TelekhinesFactoryEdificaciones;
 
-
-
 /**
  *
  * @author aacm12
  */
 //los Basilisk son una nave aerea contrudia por los Mandalorian
-public class NidoDragon implements EdificacionesTelekhines{
-    private int vida=500;
+public class NidoDragon implements EdificacionesTelekhines {
+
+    private int vida = 500;
 
     public NidoDragon() {
     }
@@ -34,11 +33,10 @@ public class NidoDragon implements EdificacionesTelekhines{
     public void GenerarRecurso() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
     public void guardar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
 }

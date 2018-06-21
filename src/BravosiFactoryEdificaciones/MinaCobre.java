@@ -8,17 +8,14 @@ package BravosiFactoryEdificaciones;
 import AbstractFactoryBravos.Bravos;
 import Menu.FuncionesMenu;
 
-
-
-
-
 /**
  *
  * @author aacm12
  */
 public class MinaCobre implements EdificacionesBravosi {
+
     Bravos B = new Bravos();
-    private int vida=500;
+    private int vida = 500;
     private int Temp, Inicial;
 
     public MinaCobre() {
@@ -36,31 +33,29 @@ public class MinaCobre implements EdificacionesBravosi {
     public void setVida(int vida) {
         this.vida = vida;
     }
-    
 
     @Override
     public void GenerarRecurso() {
         if (FuncionesMenu.fase > (Inicial + 2)) {
             Temp = B.getCobre();
-            if (Temp<B.getMaxC()){
+            if (Temp < B.getMaxC()) {
                 System.out.println("Cobre: " + B.getCobre());
                 Temp += 400;
-                if (Temp>B.getMaxC()){
-                    int sobra = Temp-B.getMaxC();
-                    Temp = Temp-sobra;
+                if (Temp > B.getMaxC()) {
+                    int sobra = Temp - B.getMaxC();
+                    Temp = Temp - sobra;
                     System.out.println("COFRE SE A LLENADO");
                 }
                 B.setCobre(Temp);
-                System.out.println("Fase "+FuncionesMenu.fase);
+                System.out.println("Fase " + FuncionesMenu.fase);
                 System.out.println("Nuevo Valor Cobre: " + B.getCobre());
-            }else{
+            } else {
                 System.out.println("Cobre: " + B.getCobre());
                 System.out.println("COFRE DE Cobre LLENO, tendra que gastar Cobre antes de poder seguir generando");
             }
-        }
-        else{
-            System.out.println("La edificación Oro ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
+        } else {
+            System.out.println("La edificación Oro ha sido creada, y podrá usarse hasta la fase " + (Inicial + 3));
         }
     }
-    
+
 }

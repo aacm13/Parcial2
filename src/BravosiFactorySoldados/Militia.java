@@ -5,14 +5,15 @@
  */
 package BravosiFactorySoldados;
 
-
-
 /**
  *
  * @author aacm12
  */
 public interface Militia {
+
     public int vida(int EnemyDamage);
+
     public int attack();
+
     public void damage(int EnemyDamage);
 }

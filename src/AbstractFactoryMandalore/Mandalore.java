@@ -18,6 +18,7 @@ import java.util.*;
 //Debido a su cultura guerrera no le ponen mucha atencion a la Arquitectura
 //      --1+ turno en tiempo de construccion de edificaciones
 public class Mandalore {
+
     //Recursos Iniciales, tiene una quinta parte del total maximo de la primera base
     private int Cobre;
     private int Plata;
@@ -34,14 +35,10 @@ public class Mandalore {
         maxP = 5000;//Max Plata
         maxO = 3000;//Max Oro
     }
-    
-    
-    private ArrayList<EdificacionesMandalorian> EdificacionesMandalorian = new
-         ArrayList<EdificacionesMandalorian>();
-    
-    
-    //getter y setter
 
+    private ArrayList<EdificacionesMandalorian> EdificacionesMandalorian = new ArrayList<EdificacionesMandalorian>();
+
+    //getter y setter
     public int getCobre() {
         return Cobre;
     }

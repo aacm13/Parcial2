@@ -5,7 +5,6 @@
  */
 package BravosiFactoryVehiculos;
 
-
 import java.util.Random;
 
 /**
@@ -13,6 +12,7 @@ import java.util.Random;
  * @author acm12
  */
 public class Destroyer implements VehiculosBravosi {
+
     private int Vida = 300;
     private String nombre;
     private Random rand = new Random();
@@ -39,17 +39,15 @@ public class Destroyer implements VehiculosBravosi {
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
-    
-    
-    
+
     @Override
     public int attack() {
-        int damage= 60;
+        int damage = 60;
         int prob = rand.nextInt(10);
-        if (prob>3){
+        if (prob > 3) {
             return damage;
         }
-        return damage/3;//si fallan entonces solo hacen un tercio del daño
+        return damage / 3;//si fallan entonces solo hacen un tercio del daño
     }
 
     @Override
@@ -61,6 +59,5 @@ public class Destroyer implements VehiculosBravosi {
     public void damage(int EnemyDamage) {
         this.Vida -= EnemyDamage;
     }
-    
-    
+
 }

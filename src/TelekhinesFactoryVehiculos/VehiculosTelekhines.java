@@ -12,8 +12,11 @@ import MandalorianFactoryVehiculos.*;
  * @author aacm12
  */
 public interface VehiculosTelekhines {
+
     public int vida(int EnemyDamage);
+
     public int attack();
+
     public void damage(int EnemyDamage);
-    
+
 }

@@ -18,6 +18,7 @@ import java.util.ArrayList;
 //      --No tienen desventajas ni ventajas
 //      ++Generar mayor cantidad de recursos por turno
 public class Bravos {
+
     //Recursos Iniciales, tiene una quinta parte del total maximo de la primera base
     private int Cobre = 2000;
     private int Plata = 1000;
@@ -25,9 +26,8 @@ public class Bravos {
     private int maxC = 10000;//Max Combre
     private int maxP = 5000;//Max Plata
     private int maxO = 3000;//Max Oro
-    
-    private ArrayList<EdificacionesBravosi> EdificacionesBravosi = new
-         ArrayList<EdificacionesBravosi>();
+
+    private ArrayList<EdificacionesBravosi> EdificacionesBravosi = new ArrayList<EdificacionesBravosi>();
     //getter y setter
 
     public int getCobre() {

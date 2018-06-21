@@ -8,11 +8,12 @@ package BravosiFactorySoldados;
 import AbstractFactoryBravos.AbstractFactoryBravosi;
 import BravosiFactoryEdificaciones.EdificacionesBravosi;
 import BravosiFactoryVehiculos.VehiculosBravosi;
+
 /**
  *
  * @author aacm12
  */
-public class BravosiFactoryMilitia extends AbstractFactoryBravosi{
+public class BravosiFactoryMilitia extends AbstractFactoryBravosi {
 
     @Override
     public EdificacionesBravosi getEdificacionBravosi(String tipo) {
@@ -26,7 +27,7 @@ public class BravosiFactoryMilitia extends AbstractFactoryBravosi{
 
     @Override
     public Militia getSoldadoBravosi(String tipo) {
-        switch(tipo){
+        switch (tipo) {
             case "Raiders":
                 return new MilitiaCivil();
             case "WizardSaint": //De este solo podrá haber uno en batalla **DEBERÉ HACER TAL VALIDACIÓN

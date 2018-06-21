@@ -12,7 +12,8 @@ import java.util.*;
  * @author aacm12
  */
 //
-public class MilitiaCivil implements Militia{
+public class MilitiaCivil implements Militia {
+
     private int Vida = 100; //
     private String nombre;
     private Random rand = new Random();
@@ -39,8 +40,7 @@ public class MilitiaCivil implements Militia{
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
-    
-    
+
     @Override
     public int vida(int EnemyDamage) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -48,17 +48,17 @@ public class MilitiaCivil implements Militia{
 
     @Override
     public int attack() {
-        int damage= 20;//
+        int damage = 20;//
         int prob = rand.nextInt(10);
-        if (prob>3){//
+        if (prob > 3) {//
             return damage;
         }
-        return damage/3;//si fallan entonces solo hacen un tercio del daño
+        return damage / 3;//si fallan entonces solo hacen un tercio del daño
     }
 
     @Override
     public void damage(int EnemyDamage) {
         this.Vida -= EnemyDamage;
     }
-    
+
 }

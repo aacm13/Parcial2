@@ -13,9 +13,9 @@ import Menu.FuncionesMenu;
  * @author aacm12
  */
 public class MinaCobre implements EdificacionesMandalorian {
-    
+
     Mandalore M = new Mandalore();
-    private int vida=500;
+    private int vida = 500;
     private int Temp, Inicial;
 
     public MinaCobre() {
@@ -33,31 +33,29 @@ public class MinaCobre implements EdificacionesMandalorian {
     public void setVida(int vida) {
         this.vida = vida;
     }
-    
 
     @Override
     public void GenerarRecurso() {
         if (FuncionesMenu.fase > (Inicial + 2)) {
             Temp = M.getCobre();
-            if (Temp<M.getMaxC()){
+            if (Temp < M.getMaxC()) {
                 System.out.println("Cobre: " + M.getCobre());
                 Temp += 400;
-                if (Temp>M.getMaxC()){
-                    int sobra = Temp-M.getMaxC();
-                    Temp = Temp-sobra;
+                if (Temp > M.getMaxC()) {
+                    int sobra = Temp - M.getMaxC();
+                    Temp = Temp - sobra;
                     System.out.println("COFRE SE A LLENADO");
                 }
                 M.setCobre(Temp);
-                System.out.println("Fase "+FuncionesMenu.fase);
+                System.out.println("Fase " + FuncionesMenu.fase);
                 System.out.println("Nuevo Valor Cobre: " + M.getCobre());
-            }else{
+            } else {
                 System.out.println("Cobre: " + M.getCobre());
                 System.out.println("COFRE DE Cobre LLENO, tendra que gastar Cobre antes de poder seguir generando");
             }
-        }
-        else{
-            System.out.println("La edificación Cobre ha sido creada, y podrá usarse hasta la fase " + (Inicial+3));   
+        } else {
+            System.out.println("La edificación Cobre ha sido creada, y podrá usarse hasta la fase " + (Inicial + 3));
         }
     }
-    
+
 }

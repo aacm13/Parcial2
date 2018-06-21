@@ -10,7 +10,10 @@ package TelekhinesFactorySoldados;
  * @author aacm12
  */
 public interface Guerreros {
+
     public int vida(int EnemyDamage);
+
     public int attack();
+
     public void damage(int EnemyDamage);
 }

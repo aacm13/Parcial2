@@ -5,7 +5,6 @@
  */
 package BravosiFactoryVehiculos;
 
-
 import java.util.Random;
 
 /**
@@ -13,6 +12,7 @@ import java.util.Random;
  * @author aacm12
  */
 public class F22_Raptor implements VehiculosBravosi {
+
     private int Vida = 400;
     private String nombre;
     private Random rand = new Random();
@@ -39,16 +39,15 @@ public class F22_Raptor implements VehiculosBravosi {
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
-    
-    
+
     @Override
     public int attack() {
-        int damage= 80;
+        int damage = 80;
         int prob = rand.nextInt(10);
-        if (prob>3){//por el hecho que muy buenas armas tienen acceptable probabilidad de hacer daño
+        if (prob > 3) {//por el hecho que muy buenas armas tienen acceptable probabilidad de hacer daño
             return damage;
         }
-        return damage/2;//si fallan entonces solo hacen la mitad del daño
+        return damage / 2;//si fallan entonces solo hacen la mitad del daño
     }
 
     @Override
@@ -60,5 +59,5 @@ public class F22_Raptor implements VehiculosBravosi {
     public void damage(int EnemyDamage) {
         this.Vida -= EnemyDamage;
     }
-    
+
 }

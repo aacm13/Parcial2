@@ -10,8 +10,11 @@ package MandalorianFactoryVehiculos;
  * @author aacm12
  */
 public interface VehiculosMandalorian {
+
     public int vida(int EnemyDamage);
+
     public int attack();
+
     public void damage(int EnemyDamage);
-    
+
 }

@@ -5,7 +5,6 @@
  */
 package AlvaroCorpenoWorld;
 
-
 /**
  *
  * @author aacm12
@@ -46,7 +45,8 @@ import java.util.Scanner;
  * @author aacm12
  */
 public class Menu {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         // Bases Centrales
         Mandalore M = new Mandalore();
         Bravos B = new Bravos();
@@ -75,10 +75,10 @@ public class Menu {
                     Mandalore InicioM = new Mandalore();
                     input.nextLine(); //Soluciona el problema de limpiar el buffer
                     //Dispongo tando de \n (salto de línea) como de la creación de tabs \t ... y muestro los valores de los recursos con los que inicializa la nueva partida.
-                    System.out.println("Recursos Iniciales:\n" +
-                            "Cobre: " + InicioM.getCobre() +
-                            "\nPlata: " + InicioM.getPlata() +
-                            "\nOro: " + InicioM.getOro());
+                    System.out.println("Recursos Iniciales:\n"
+                            + "Cobre: " + InicioM.getCobre()
+                            + "\nPlata: " + InicioM.getPlata()
+                            + "\nOro: " + InicioM.getOro());
                     if (a == 1) {
                         //Acá asigno la selección de raza y nombre del jugador uno a un par de variables auxiliares que me servirá más adelante.
                         OpcRJ1 = OpcR;
@@ -93,11 +93,11 @@ public class Menu {
                 case 2:
                     muestraDatosUsuario(nombre, "Bravosi");
                     Bravos InicioB = new Bravos();
-                    input.nextLine(); 
-                    System.out.println("Recursos Iniciales:\n" +
-                            "Cobre: " + InicioB.getCobre() +
-                            "\nPlata: " + InicioB.getPlata() +
-                            "\nOro: " + InicioB.getOro());
+                    input.nextLine();
+                    System.out.println("Recursos Iniciales:\n"
+                            + "Cobre: " + InicioB.getCobre()
+                            + "\nPlata: " + InicioB.getPlata()
+                            + "\nOro: " + InicioB.getOro());
                     if (a == 1) {
                         OpcRJ1 = OpcR;
                         nombreJ1 = nombre;
@@ -111,17 +111,18 @@ public class Menu {
                     muestraDatosUsuario(nombre, "Telekhines");
                     Telekhines InicioT = new Telekhines();
                     input.nextLine(); //Soluciona el problema de limpiar el buffer
-                    System.out.println("Recursos Iniciales:\n" +
-                            "Cobre: " + InicioT.getCobre() +
-                            "\nPlata: " + InicioT.getPlata() +
-                            "\nOro: " + InicioT.getOro());
+                    System.out.println("Recursos Iniciales:\n"
+                            + "Cobre: " + InicioT.getCobre()
+                            + "\nPlata: " + InicioT.getPlata()
+                            + "\nOro: " + InicioT.getOro());
                     if (a == 1) {
                         OpcRJ1 = OpcR;
                         nombreJ1 = nombre;
                     } else {
                         OpcRJ2 = OpcR;
                         nombreJ2 = nombre;
-                    }   a += 1;
+                    }
+                    a += 1;
                     break;
                 default:
                     break;
@@ -140,7 +141,7 @@ public class Menu {
                         + "\n4. Mejorar Centro de Mando"
                         + "\n5. Pasar Turno");
                 System.out.println("-----------------------------------------------");
-                
+
                 OSMT = input.nextInt();
                 if (OpcRJ1 == 1) {
                     switch (OSMT) {
@@ -159,9 +160,9 @@ public class Menu {
                                     if (M.getCobre() >= 500 && M.getPlata() >= 100) {
                                         EdificacionesMandalorian Oro = new MinaOro();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempC = M.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = M.getPlata();
@@ -171,21 +172,21 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos");
                                     }
                                     break;
                                 case 2:
-                                    
+
                                     if (M.getOro() >= 75 && M.getPlata() >= 100) {
                                         EdificacionesMandalorian Cobre = new MinaCobre();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempO = M.getOro();
                                         int Oro = TempO - 75;
                                         int TempP = M.getPlata();
@@ -195,21 +196,21 @@ public class Menu {
                                         M.setOro(Oro);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos...");
                                     }
                                     break;
                                 case 3:
-                                     
+
                                     if (M.getOro() >= 75 && M.getCobre() >= 500) {
                                         EdificacionesMandalorian Plata = new MinaPlata();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempO = M.getOro();
                                         int Oro = TempO - 75;
                                         int TempC = M.getCobre();
@@ -219,21 +220,21 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
                                     break;
                                 case 4:
-                                    
+
                                     if (M.getCobre() >= 500 && M.getOro() >= 1500 && M.getPlata() >= 750) {
                                         EdificacionesMandalorian EMO = new MandalorianBarracks();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());                      
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempC = M.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = M.getPlata();
@@ -246,24 +247,24 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
 
                                     break;
                                 case 5:
-                                    
+
                                     if (M.getCobre() >= 400 && M.getPlata() >= 2150 && M.getOro() >= 1500) {
                                         EdificacionesMandalorian LOB = new FabricaBasilisk();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());                     
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempC = M.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = M.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = M.getOro();
@@ -274,9 +275,9 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -286,11 +287,11 @@ public class Menu {
                                     if (M.getCobre() >= 300 && M.getPlata() >= 2050 && M.getOro() >= 1000) {
                                         EdificacionesMandalorian LOB = new FabricaSabertank();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());                     
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempC = M.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = M.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = M.getOro();
@@ -301,9 +302,9 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -340,7 +341,7 @@ public class Menu {
 
                             break;
                         case 3:
-                            System.out.println("Atacar\nSeleccione a quién desea atacar..."); 
+                            System.out.println("Atacar\nSeleccione a quién desea atacar...");
                             MGH.damage(MO.attack());
                             System.out.println(MGH.getVida());
                             break;
@@ -374,9 +375,9 @@ public class Menu {
                                     if (B.getCobre() >= 500 && B.getPlata() >= 100) {
                                         EdificacionesBravosi Oro = (EdificacionesBravosi) new MinaOro();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempC = B.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = B.getPlata();
@@ -386,21 +387,21 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos");
                                     }
                                     break;
                                 case 2:
-                                    
+
                                     if (B.getOro() >= 75 && B.getPlata() >= 100) {
                                         EdificacionesBravosi Cobre = (EdificacionesBravosi) new MinaCobre();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempO = B.getOro();
                                         int Oro = TempO - 75;
                                         int TempP = B.getPlata();
@@ -410,21 +411,21 @@ public class Menu {
                                         B.setOro(Oro);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos...");
                                     }
                                     break;
                                 case 3:
-                                     
+
                                     if (B.getOro() >= 75 && B.getCobre() >= 500) {
-                                        EdificacionesBravosi Plata =  (EdificacionesBravosi) new MinaPlata();
+                                        EdificacionesBravosi Plata = (EdificacionesBravosi) new MinaPlata();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempO = B.getOro();
                                         int Oro = TempO - 75;
                                         int TempC = B.getCobre();
@@ -434,21 +435,21 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
                                     break;
                                 case 4:
-                                    
+
                                     if (B.getCobre() >= 500 && B.getOro() >= 1500 && B.getPlata() >= 750) {
                                         EdificacionesBravosi EMO = new BravosiCantina();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());                      
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempC = B.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = B.getPlata();
@@ -461,24 +462,24 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
 
                                     break;
                                 case 5:
-                                    
+
                                     if (B.getCobre() >= 400 && B.getPlata() >= 2150 && B.getOro() >= 1500) {
-                                       EdificacionesBravosi LOB = new ShipYard();
+                                        EdificacionesBravosi LOB = new ShipYard();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());                      
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempC = B.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = B.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = B.getOro();
@@ -489,9 +490,9 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -501,11 +502,11 @@ public class Menu {
                                     if (B.getCobre() >= 300 && B.getPlata() >= 2050 && B.getOro() >= 1000) {
                                         EdificacionesBravosi LOB = new Techistri();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());                     
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempC = M.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = M.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = M.getOro();
@@ -516,9 +517,9 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -598,9 +599,9 @@ public class Menu {
                                     if (T.getCobre() >= 500 && T.getPlata() >= 100) {
                                         EdificacionesTelekhines Oro = (EdificacionesTelekhines) new MinaOro();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempC = T.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = T.getPlata();
@@ -610,21 +611,21 @@ public class Menu {
                                         T.setCobre(Cobre);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos");
                                     }
                                     break;
                                 case 2:
-                                    
+
                                     if (B.getOro() >= 75 && B.getPlata() >= 100) {
                                         EdificacionesTelekhines Cobre = (EdificacionesTelekhines) new MinaCobre();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempO = T.getOro();
                                         int Oro = TempO - 75;
                                         int TempP = T.getPlata();
@@ -634,21 +635,21 @@ public class Menu {
                                         T.setOro(Oro);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos...");
                                     }
                                     break;
                                 case 3:
-                                     
+
                                     if (T.getOro() >= 75 && T.getCobre() >= 500) {
                                         EdificacionesTelekhines Plata = (EdificacionesTelekhines) new MinaPlata();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TemoO = T.getOro();
                                         int Oro = TemoO - 75;
                                         int TempC = T.getCobre();
@@ -658,21 +659,21 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
                                     break;
                                 case 4:
-                                    
+
                                     if (B.getCobre() >= 1000 && B.getOro() >= 500 && B.getPlata() >= 750) {
                                         EdificacionesTelekhines EMO = new TelekhinesHall();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());                      
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempC = B.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = B.getPlata();
@@ -685,24 +686,24 @@ public class Menu {
                                         T.setCobre(Cobre);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
 
                                     break;
                                 case 5:
-                                    
+
                                     if (T.getCobre() >= 1400 && T.getPlata() >= 750 && T.getOro() >= 200) {
-                                       EdificacionesTelekhines X = new NidoDragon();
+                                        EdificacionesTelekhines X = new NidoDragon();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());                     
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempC = T.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = T.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = T.getOro();
@@ -713,9 +714,9 @@ public class Menu {
                                         T.setCobre(Cobre);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -725,11 +726,11 @@ public class Menu {
                                     if (T.getCobre() >= 1000 && T.getPlata() >= 2050 && T.getOro() >= 9000) {
                                         EdificacionesTelekhines LOB = new SummoningCircle();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());                    
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempC = T.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = T.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = T.getOro();
@@ -740,9 +741,9 @@ public class Menu {
                                         T.setCobre(Cobre);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -805,7 +806,7 @@ public class Menu {
                     }
                 } else {
                     System.out.println("Escoja una opción válida...");
-                }                
+                }
 
             }
 
@@ -839,9 +840,9 @@ public class Menu {
                                     if (M.getCobre() >= 500 && M.getPlata() >= 100) {
                                         EdificacionesMandalorian Oro = new MinaOro();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempC = M.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = M.getPlata();
@@ -851,21 +852,21 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos");
                                     }
                                     break;
                                 case 2:
-                                    
+
                                     if (M.getOro() >= 75 && M.getPlata() >= 100) {
                                         EdificacionesMandalorian Cobre = new MinaCobre();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempO = M.getOro();
                                         int Oro = TempO - 75;
                                         int TempP = M.getPlata();
@@ -875,21 +876,21 @@ public class Menu {
                                         M.setOro(Oro);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos...");
                                     }
                                     break;
                                 case 3:
-                                     
+
                                     if (M.getOro() >= 75 && M.getCobre() >= 500) {
                                         EdificacionesMandalorian Plata = new MinaPlata();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempO = M.getOro();
                                         int Oro = TempO - 75;
                                         int TempC = M.getCobre();
@@ -899,21 +900,21 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
                                     break;
                                 case 4:
-                                    
+
                                     if (M.getCobre() >= 500 && M.getOro() >= 1500 && M.getPlata() >= 750) {
                                         EdificacionesMandalorian EMO = new MandalorianBarracks();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());                      
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempC = M.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = M.getPlata();
@@ -926,24 +927,24 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
 
                                     break;
                                 case 5:
-                                    
+
                                     if (M.getCobre() >= 400 && M.getPlata() >= 2150 && M.getOro() >= 1500) {
                                         EdificacionesMandalorian LOB = new FabricaBasilisk();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());                     
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempC = M.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = M.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = M.getOro();
@@ -954,9 +955,9 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -966,11 +967,11 @@ public class Menu {
                                     if (M.getCobre() >= 300 && M.getPlata() >= 2050 && M.getOro() >= 1000) {
                                         EdificacionesMandalorian LOB = new FabricaSabertank();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());                     
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                         int TempC = M.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = M.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = M.getOro();
@@ -981,9 +982,9 @@ public class Menu {
                                         M.setCobre(Cobre);
                                         M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+M.getOro());
-                                        System.out.println("COBRE:"+M.getCobre());
-                                        System.out.println("PLATA:"+M.getPlata());
+                                        System.out.println("ORO:" + M.getOro());
+                                        System.out.println("COBRE:" + M.getCobre());
+                                        System.out.println("PLATA:" + M.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -1020,7 +1021,7 @@ public class Menu {
 
                             break;
                         case 3:
-                            System.out.println("Atacar\nSeleccione a quién desea atacar..."); 
+                            System.out.println("Atacar\nSeleccione a quién desea atacar...");
                             MGH.damage(MO.attack());
                             System.out.println(MGH.getVida());
                             break;
@@ -1054,9 +1055,9 @@ public class Menu {
                                     if (B.getCobre() >= 500 && B.getPlata() >= 100) {
                                         EdificacionesBravosi Oro = (EdificacionesBravosi) new MinaOro();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempC = B.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = B.getPlata();
@@ -1066,21 +1067,21 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos");
                                     }
                                     break;
                                 case 2:
-                                    
+
                                     if (B.getOro() >= 75 && B.getPlata() >= 100) {
                                         EdificacionesBravosi Cobre = (EdificacionesBravosi) new MinaCobre();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempO = B.getOro();
                                         int Oro = TempO - 75;
                                         int TempP = B.getPlata();
@@ -1090,21 +1091,21 @@ public class Menu {
                                         B.setOro(Oro);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos...");
                                     }
                                     break;
                                 case 3:
-                                     
+
                                     if (B.getOro() >= 75 && B.getCobre() >= 500) {
-                                        EdificacionesBravosi Plata =  (EdificacionesBravosi) new MinaPlata();
+                                        EdificacionesBravosi Plata = (EdificacionesBravosi) new MinaPlata();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempO = B.getOro();
                                         int Oro = TempO - 75;
                                         int TempC = B.getCobre();
@@ -1114,21 +1115,21 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
                                     break;
                                 case 4:
-                                    
+
                                     if (B.getCobre() >= 500 && B.getOro() >= 1500 && B.getPlata() >= 750) {
                                         EdificacionesBravosi EMO = new BravosiCantina();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());                      
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempC = B.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = B.getPlata();
@@ -1141,24 +1142,24 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
 
                                     break;
                                 case 5:
-                                    
+
                                     if (B.getCobre() >= 400 && B.getPlata() >= 2150 && B.getOro() >= 1500) {
-                                       EdificacionesBravosi LOB = new ShipYard();
+                                        EdificacionesBravosi LOB = new ShipYard();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());                      
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempC = B.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = B.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = B.getOro();
@@ -1169,9 +1170,9 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -1181,11 +1182,11 @@ public class Menu {
                                     if (B.getCobre() >= 300 && B.getPlata() >= 2050 && B.getOro() >= 1000) {
                                         EdificacionesBravosi LOB = new Techistri();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());                     
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                         int TempC = M.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = M.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = M.getOro();
@@ -1196,9 +1197,9 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+B.getOro());
-                                        System.out.println("COBRE:"+B.getCobre());
-                                        System.out.println("PLATA:"+B.getPlata());
+                                        System.out.println("ORO:" + B.getOro());
+                                        System.out.println("COBRE:" + B.getCobre());
+                                        System.out.println("PLATA:" + B.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -1278,9 +1279,9 @@ public class Menu {
                                     if (T.getCobre() >= 500 && T.getPlata() >= 100) {
                                         EdificacionesTelekhines Oro = (EdificacionesTelekhines) new MinaOro();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempC = T.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = T.getPlata();
@@ -1290,21 +1291,21 @@ public class Menu {
                                         T.setCobre(Cobre);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos");
                                     }
                                     break;
                                 case 2:
-                                    
+
                                     if (B.getOro() >= 75 && B.getPlata() >= 100) {
                                         EdificacionesTelekhines Cobre = (EdificacionesTelekhines) new MinaCobre();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempO = T.getOro();
                                         int Oro = TempO - 75;
                                         int TempP = T.getPlata();
@@ -1314,21 +1315,21 @@ public class Menu {
                                         T.setOro(Oro);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fondos...");
                                     }
                                     break;
                                 case 3:
-                                     
+
                                     if (T.getOro() >= 75 && T.getCobre() >= 500) {
                                         EdificacionesTelekhines Plata = (EdificacionesTelekhines) new MinaPlata();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TemoO = T.getOro();
                                         int Oro = TemoO - 75;
                                         int TempC = T.getCobre();
@@ -1338,21 +1339,21 @@ public class Menu {
                                         B.setCobre(Cobre);
                                         B.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
                                     break;
                                 case 4:
-                                    
+
                                     if (B.getCobre() >= 1000 && B.getOro() >= 500 && B.getPlata() >= 750) {
                                         EdificacionesTelekhines EMO = new TelekhinesHall();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());                      
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempC = B.getCobre();
                                         int Cobre = TempC - 500;
                                         int TempP = B.getPlata();
@@ -1365,24 +1366,24 @@ public class Menu {
                                         T.setCobre(Cobre);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tines suficientes fondos...");
                                     }
 
                                     break;
                                 case 5:
-                                    
+
                                     if (T.getCobre() >= 1400 && T.getPlata() >= 750 && T.getOro() >= 200) {
-                                       EdificacionesTelekhines X = new NidoDragon();
+                                        EdificacionesTelekhines X = new NidoDragon();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());                     
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempC = T.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = T.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = T.getOro();
@@ -1393,9 +1394,9 @@ public class Menu {
                                         T.setCobre(Cobre);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -1405,11 +1406,11 @@ public class Menu {
                                     if (T.getCobre() >= 1000 && T.getPlata() >= 2050 && T.getOro() >= 9000) {
                                         EdificacionesTelekhines LOB = new SummoningCircle();
                                         System.out.println("Valores de fondos ANTES de Compra:");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());                    
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                         int TempC = T.getCobre();
-                                        int Cobre= TempC - 400;
+                                        int Cobre = TempC - 400;
                                         int TempP = T.getPlata();
                                         int Plata = TempP - 2150;
                                         int TempO = T.getOro();
@@ -1420,9 +1421,9 @@ public class Menu {
                                         T.setCobre(Cobre);
                                         T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
-                                        System.out.println("ORO:"+T.getOro());
-                                        System.out.println("COBRE:"+T.getCobre());
-                                        System.out.println("PLATA:"+T.getPlata());
+                                        System.out.println("ORO:" + T.getOro());
+                                        System.out.println("COBRE:" + T.getCobre());
+                                        System.out.println("PLATA:" + T.getPlata());
                                     } else {
                                         System.out.println("No tiene suficientes fundos");
                                     }
@@ -1483,7 +1484,7 @@ public class Menu {
                     for (int i = 0; i < T.getEdificacionesTelekhines().size(); i++) {
                         T.getEdificacionesTelekhines().get(i).GenerarRecurso();
                     }
-                    
+
                 } else {
                     System.out.println("Escoja una opción válida...");
                 }
@@ -1493,7 +1494,6 @@ public class Menu {
 
         } while (MGH.getVida() > 0 || MO.getVida() > 0 || MEs.getVida() > 0);
 
-        
     }
 
 }

@@ -14,6 +14,7 @@ import MandalorianFactoryVehiculos.VehiculosMandalorian;
  * @author Josué González <00034715@uca.edu.sv>
  */
 public class EdificacionMandalorianFactory extends AbstractFactoryMandalorian {
+
     @Override
     public EdificacionesMandalorian getEdificacionMandalorian(String tipo) {
         switch (tipo) {

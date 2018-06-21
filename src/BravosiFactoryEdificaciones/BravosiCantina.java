@@ -5,16 +5,12 @@
  */
 package BravosiFactoryEdificaciones;
 
-
-
-
-
 /**
  *
  * @author aacm12
  */
-public class BravosiCantina implements EdificacionesBravosi{
-    
+public class BravosiCantina implements EdificacionesBravosi {
+
     private int vida;
 
     public BravosiCantina() {
@@ -31,10 +27,10 @@ public class BravosiCantina implements EdificacionesBravosi{
     public void setVida(int vida) {
         this.vida = vida;
     }
-    
+
     @Override
     public void GenerarRecurso() {
-        
+
     }
-    
+
 }

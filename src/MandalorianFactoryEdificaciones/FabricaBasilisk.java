@@ -10,7 +10,8 @@ package MandalorianFactoryEdificaciones;
  * @author aacm12
  */
 //los Basilisk son una nave aerea contrudia por los Mandalorian
-public class FabricaBasilisk implements EdificacionesMandalorian{
+public class FabricaBasilisk implements EdificacionesMandalorian {
+
     private int vida;
 
     public FabricaBasilisk() {
@@ -30,9 +31,7 @@ public class FabricaBasilisk implements EdificacionesMandalorian{
 
     @Override
     public void GenerarRecurso() {
-        
+
     }
 
-
-    
 }

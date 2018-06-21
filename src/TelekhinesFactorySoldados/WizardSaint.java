@@ -13,10 +13,12 @@ import java.util.*;
  * @author aacm12
  */
 //soldados elite entre los Mandalorian
-public class WizardSaint implements Guerreros{
-    private int Vida = 200-20;// 
+public class WizardSaint implements Guerreros {
+
+    private int Vida = 200 - 20;// 
     private String nombre;
     private Random rand = new Random();
+
     public WizardSaint() {
     }
 
@@ -39,9 +41,7 @@ public class WizardSaint implements Guerreros{
     public void setVida(int Vida) {
         this.Vida = Vida;
     }
-    
-    
-    
+
     @Override
     public int vida(int EnemyDamage) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -49,17 +49,17 @@ public class WizardSaint implements Guerreros{
 
     @Override
     public int attack() {
-        int damage= 40+20;
+        int damage = 40 + 20;
         int prob = rand.nextInt(10);
-        if (prob>4){//
+        if (prob > 4) {//
             return damage;
         }
-        return damage/2;//si fallan entonces solo hacen la mitad del daño
+        return damage / 2;//si fallan entonces solo hacen la mitad del daño
     }
 
     @Override
     public void damage(int EnemyDamage) {
         this.Vida -= EnemyDamage;
     }
-    
+
 }

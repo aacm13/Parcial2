@@ -5,14 +5,12 @@
  */
 package BravosiFactoryEdificaciones;
 
-
-
-
 /**
  *
  * @author aacm12
  */
 public interface EdificacionesBravosi {
+
     public void GenerarRecurso();
 
 }

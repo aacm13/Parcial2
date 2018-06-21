@@ -10,7 +10,10 @@ package MandalorianFactorySoldados;
  * @author aacm12
  */
 public interface Tropas {
+
     public int vida(int EnemyDamage);
+
     public int attack();
+
     public void damage(int EnemyDamage);
 }

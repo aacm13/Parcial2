@@ -10,7 +10,8 @@ package MandalorianFactoryEdificaciones;
  * @author aacm12
  */
 //los Sabertank son una tanketa terrestre contrudia por los Mandalorian con grn capacidad de desrtuccion
-public class FabricaSabertank implements EdificacionesMandalorian{
+public class FabricaSabertank implements EdificacionesMandalorian {
+
     private int vida;
 
     public FabricaSabertank() {
@@ -30,9 +31,7 @@ public class FabricaSabertank implements EdificacionesMandalorian{
 
     @Override
     public void GenerarRecurso() {
-        
+
     }
 
-
-    
 }

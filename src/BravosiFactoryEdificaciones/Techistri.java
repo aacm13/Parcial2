@@ -5,15 +5,13 @@
  */
 package BravosiFactoryEdificaciones;
 
-
-
-
 /**
  *
  * @author aacm12
  */
 //los Basilisk son una nave aerea contrudia por los Mandalorian
-public class Techistri implements EdificacionesBravosi{
+public class Techistri implements EdificacionesBravosi {
+
     private int vida;
 
     public Techistri() {
@@ -33,9 +31,7 @@ public class Techistri implements EdificacionesBravosi{
 
     @Override
     public void GenerarRecurso() {
-        
+
     }
 
-
-    
 }

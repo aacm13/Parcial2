@@ -5,16 +5,13 @@
  */
 package BravosiFactoryEdificaciones;
 
-
-
-
-
 /**
  *
  * @author aacm12
  */
 //
-public class ShipYard implements EdificacionesBravosi{
+public class ShipYard implements EdificacionesBravosi {
+
     private int vida;
 
     public ShipYard() {
@@ -34,9 +31,7 @@ public class ShipYard implements EdificacionesBravosi{
 
     @Override
     public void GenerarRecurso() {
-    
+
     }
 
-
-    
 }

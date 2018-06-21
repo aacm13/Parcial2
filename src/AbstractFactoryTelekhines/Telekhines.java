@@ -7,6 +7,7 @@ package AbstractFactoryTelekhines;
 
 import TelekhinesFactoryEdificaciones.EdificacionesTelekhines;
 import java.util.*;
+
 /**
  *
  * @author aacm12
@@ -19,6 +20,7 @@ import java.util.*;
 //      ++Mayor Daño causado y -1 turno en todas sus contruciones
 //      --Menor vida y Menor recoleccion de recursos(debido a destierro) 30 - recursos
 public class Telekhines {
+
     //Recursos Iniciales, tiene una quinta parte del total maximo de la primera base
     private int Cobre = 2000;
     private int Plata = 1000;
@@ -26,12 +28,10 @@ public class Telekhines {
     private int maxC = 10000;//Max Combre
     private int maxP = 5000;//Max Plata
     private int maxO = 3000;//Max Oro
-    
-    private ArrayList<EdificacionesTelekhines> EdificacionesTelekhines = new
-         ArrayList<EdificacionesTelekhines>();
-    
-    //getter y setter
 
+    private ArrayList<EdificacionesTelekhines> EdificacionesTelekhines = new ArrayList<EdificacionesTelekhines>();
+
+    //getter y setter
     public int getCobre() {
         return Cobre;
     }
