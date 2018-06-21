@@ -55,9 +55,8 @@ public class Menu {
         NiteOwls MO = new NiteOwls();
         Raider MEs = new Raider();
 
-        String nombre, nombreJ1 = null, nombreJ2 = null, nombreEdif;
-        int opcionSubMenuTurnos, opcionEdif, opcionAtaque, a = 1, opcionRaza, opcionMenuRaza, opcionRazaJ1 = 0, opcionRazaJ2 = 0, VerRoMejora; //Sin esa igualación a cero, me da error abajo:v
-
+        String nombre, nombreJ1 = null, nombreJ2 = null;
+        int OSMT, OE, OA, a = 1, OpcR, OpcRJ1 = 0, OpcRJ2 = 0, Mejora;
         Scanner input = new Scanner(System.in);
 
         Inicio();
@@ -68,8 +67,8 @@ public class Menu {
             //Ahora pido el tipo de raza con la que desea jugar
             System.out.println("A continuación, escoja la raza que desea...\n de momento solo puede escoger la raza humanos guerreros");
             System.out.println("1. Mandalorian\n2. Bravosi\n3. Telkhines");
-            opcionRaza = input.nextInt();
-            switch (opcionRaza) {
+            OpcR = input.nextInt();
+            switch (OpcR) {
                 case 1:
                     muestraDatosUsuario(nombre, "Mandalorian");
                     //Esto inicializa un centro de mando nuevo para jugador uno o jugador dos, o ambos al mismo tiempo, en el supuesto que escojan la misma raza...
@@ -82,11 +81,11 @@ public class Menu {
                             "\nOro: " + InicioM.getOro());
                     if (a == 1) {
                         //Acá asigno la selección de raza y nombre del jugador uno a un par de variables auxiliares que me servirá más adelante.
-                        opcionRazaJ1 = opcionRaza;
+                        OpcRJ1 = OpcR;
                         nombreJ1 = nombre;
                     } else {
                         //Acá asigno la selección de raza y nombre del jugador uno a un par de variables auxiliares que me servirá más adelante.
-                        opcionRazaJ2 = opcionRaza;
+                        OpcRJ2 = OpcR;
                         nombreJ2 = nombre;
                     }   //Ejecuto la función del contador de a para pedir un último usuario...
                     a += 1;
@@ -100,10 +99,10 @@ public class Menu {
                             "\nPlata: " + InicioB.getPlata() +
                             "\nOro: " + InicioB.getOro());
                     if (a == 1) {
-                        opcionRazaJ1 = opcionRaza;
+                        OpcRJ1 = OpcR;
                         nombreJ1 = nombre;
                     } else {
-                        opcionRazaJ2 = opcionRaza;
+                        OpcRJ2 = OpcR;
                         nombreJ2 = nombre;
                     }   //Ejecuto la función del contador de a para pedir un último usuario...
                     a += 1;
@@ -117,10 +116,10 @@ public class Menu {
                             "\nPlata: " + InicioT.getPlata() +
                             "\nOro: " + InicioT.getOro());
                     if (a == 1) {
-                        opcionRazaJ1 = opcionRaza;
+                        OpcRJ1 = OpcR;
                         nombreJ1 = nombre;
                     } else {
-                        opcionRazaJ2 = opcionRaza;
+                        OpcRJ2 = OpcR;
                         nombreJ2 = nombre;
                     }   a += 1;
                     break;
@@ -130,8 +129,8 @@ public class Menu {
         }
 
         do {
-            opcionSubMenuTurnos = 99;//numero random para entrar al while
-            while (opcionSubMenuTurnos != 5) { //Podría luego agregar que este turno se termine ya sea luego de atacar o luego de se quede sin recursos por usar y hasta milicias para atacar (no más de un objetivo)
+            OSMT = 99;//numero random para entrar al while
+            while (OSMT != 5) { //Podría luego agregar que este turno se termine ya sea luego de atacar o luego de se quede sin recursos por usar y hasta milicias para atacar (no más de un objetivo)
                 System.out.println("-----------------------------------------------");
                 System.out.println("TURNO JUGADOR 1: " + nombreJ1);
                 System.out.println("Ingrese la opción a ejecutar:");
@@ -142,9 +141,9 @@ public class Menu {
                         + "\n5. Pasar Turno");
                 System.out.println("-----------------------------------------------");
                 
-                opcionSubMenuTurnos = input.nextInt();
-                if (opcionRazaJ1 == 1) {
-                    switch (opcionSubMenuTurnos) {
+                OSMT = input.nextInt();
+                if (OpcRJ1 == 1) {
+                    switch (OSMT) {
                         case 1:
                             System.out.println("Crea edificaciones");
                             System.out.println("Seleccione qué edificación desea crear:"
@@ -154,8 +153,8 @@ public class Menu {
                                     + "\n4. Cuartel de NiteOwls y SuperCommando's"
                                     + "\n5. Fabrica de Basilisk"
                                     + "\n6. Fabrica de SaberTank");
-                            opcionEdif = input.nextInt();
-                            switch (opcionEdif) {
+                            OE = input.nextInt();
+                            switch (OE) {
                                 case 1:
                                     if (M.getCobre() >= 500 && M.getPlata() >= 100) {
                                         EdificacionesMandalorian Oro = new MinaOro();
@@ -320,8 +319,8 @@ public class Menu {
                                     + "\n2. Super Soldado"
                                     + "\n3. Vehículo Terrestre"
                                     + "\n4. Vehículo Aéreo");
-                            opcionAtaque = input.nextInt();
-                            switch (opcionAtaque) {
+                            OA = input.nextInt();
+                            switch (OA) {
                                 case 1:
                                     System.out.println("Ataco a la militia");
                                     break;
@@ -358,8 +357,8 @@ public class Menu {
                     for (int i = 0; i < M.getEdificacionesMandalorian().size(); i++) {
                         M.getEdificacionesMandalorian().get(i).GenerarRecurso();
                     }
-                } else if (opcionRazaJ1 == 2) {
-                    switch (opcionSubMenuTurnos) {
+                } else if (OpcRJ1 == 2) {
+                    switch (OSMT) {
                         case 1:
                             System.out.println("Crea edificaciones");
                             System.out.println("Seleccione qué edificación desea crear:"
@@ -369,8 +368,8 @@ public class Menu {
                                     + "\n4. Edificación entrenamiento Bounty Hunters y Militia Civil"
                                     + "\n5. Edificación para entrenar entrenamiento Destroyer"
                                     + "\n6. Edificación para entrenar F22_Raptor");
-                            opcionEdif = input.nextInt();
-                            switch (opcionEdif) {
+                            OE = input.nextInt();
+                            switch (OE) {
                                 case 1:
                                     if (B.getCobre() >= 500 && B.getPlata() >= 100) {
                                         EdificacionesBravosi Oro = (EdificacionesBravosi) new MinaOro();
@@ -535,8 +534,8 @@ public class Menu {
                                     + "\n2. Super Soldado"
                                     + "\n3. Vehículo Terrestre"
                                     + "\n4. Vehículo Aéreo");
-                            opcionAtaque = input.nextInt();
-                            switch (opcionAtaque) {
+                            OA = input.nextInt();
+                            switch (OA) {
                                 case 1:
                                     System.out.println("Ataco a la militia");
                                     break;
@@ -562,8 +561,8 @@ public class Menu {
                         case 4:
                             System.out.println("Verificar cantidad de recursos y mejorar el CENTRO DE MANDO");
                             System.out.println("1. Verificar cantidad de recursos y edificaciones creadas\n2. Mejorar el centro de mando");
-                            VerRoMejora = input.nextInt();
-                            switch (VerRoMejora) {
+                            Mejora = input.nextInt();
+                            switch (Mejora) {
                                 case 1:
                                     System.out.println("nada");
                                 case 2:
@@ -582,8 +581,8 @@ public class Menu {
                         B.getEdificacionesBravosi().get(i).GenerarRecurso();
                     }
 
-                } else if (opcionRazaJ1 == 3) {
-                    switch (opcionSubMenuTurnos) {
+                } else if (OpcRJ1 == 3) {
+                    switch (OSMT) {
                         case 1:
                             System.out.println("Crea edificaciones");
                             System.out.println("Seleccione qué edificación desea crear:"
@@ -593,8 +592,8 @@ public class Menu {
                                     + "\n4. Edificación entrenamiento WizardSaint y Raiders"
                                     + "\n5. Edificación para entrenar entrenamiento Dragon"
                                     + "\n6. Edificación para entrenar ShadowFiend");
-                            opcionEdif = input.nextInt();
-                            switch (opcionEdif) {
+                            OE = input.nextInt();
+                            switch (OE) {
                                 case 1:
                                     if (T.getCobre() >= 500 && T.getPlata() >= 100) {
                                         EdificacionesTelekhines Oro = (EdificacionesTelekhines) new MinaOro();
@@ -759,8 +758,8 @@ public class Menu {
                                     + "\n2. Super Soldado"
                                     + "\n3. Vehículo Terrestre"
                                     + "\n4. Vehículo Aéreo");
-                            opcionAtaque = input.nextInt();
-                            switch (opcionAtaque) {
+                            OA = input.nextInt();
+                            switch (OA) {
                                 case 1:
                                     System.out.println("Ataco a la militia");
                                     break;
@@ -786,8 +785,8 @@ public class Menu {
                         case 4:
                             System.out.println("Verificar cantidad de recursos y mejorar el CENTRO DE MANDO");
                             System.out.println("1. Verificar cantidad de recursos y edificaciones creadas\n2. Mejorar el centro de mando");
-                            VerRoMejora = input.nextInt();
-                            switch (VerRoMejora) {
+                            Mejora = input.nextInt();
+                            switch (Mejora) {
                                 case 1:
                                     System.out.println("Seleccionó ver todos sus recursos y edif... + soldados+++ y ver la vida de los mismos...");
                                 case 2:
@@ -811,8 +810,8 @@ public class Menu {
             }
 
             //TURNO DE JUGADOR DOS;
-            opcionSubMenuTurnos = 12;
-            while (opcionSubMenuTurnos != 5) {
+            OSMT = 12;
+            while (OSMT != 5) {
                 System.out.println("-----------------------------------------------");
                 System.out.println("TURNO JUGADOR 2: " + nombreJ2);
                 System.out.println("Ingrese la opción a ejecutar:");
@@ -822,9 +821,9 @@ public class Menu {
                         + "\n4. Mejorar Centro de Mando"
                         + "\n5. Pasar Turno");
                 System.out.println("-----------------------------------------------");
-                opcionSubMenuTurnos = input.nextInt();
-                if (opcionRazaJ2 == 1) {
-                    switch (opcionSubMenuTurnos) {
+                OSMT = input.nextInt();
+                if (OpcRJ2 == 1) {
+                    switch (OSMT) {
                         case 1:
                             System.out.println("Crea edificaciones");
                             System.out.println("Seleccione qué edificación desea crear:"
@@ -834,8 +833,8 @@ public class Menu {
                                     + "\n4. Cuartel de NiteOwls y SuperCommando's"
                                     + "\n5. Fabrica de Basilisk"
                                     + "\n6. Fabrica de SaberTank");
-                            opcionEdif = input.nextInt();
-                            switch (opcionEdif) {
+                            OE = input.nextInt();
+                            switch (OE) {
                                 case 1:
                                     if (M.getCobre() >= 500 && M.getPlata() >= 100) {
                                         EdificacionesMandalorian Oro = new MinaOro();
@@ -1000,8 +999,8 @@ public class Menu {
                                     + "\n2. Super Soldado"
                                     + "\n3. Vehículo Terrestre"
                                     + "\n4. Vehículo Aéreo");
-                            opcionAtaque = input.nextInt();
-                            switch (opcionAtaque) {
+                            OA = input.nextInt();
+                            switch (OA) {
                                 case 1:
                                     System.out.println("Ataco a la militia");
                                     break;
@@ -1038,8 +1037,8 @@ public class Menu {
                     for (int i = 0; i < M.getEdificacionesMandalorian().size(); i++) {
                         M.getEdificacionesMandalorian().get(i).GenerarRecurso();
                     }
-                } else if (opcionRazaJ1 == 2) {
-                    switch (opcionSubMenuTurnos) {
+                } else if (OpcRJ2 == 2) {
+                    switch (OSMT) {
                         case 1:
                             System.out.println("Crea edificaciones");
                             System.out.println("Seleccione qué edificación desea crear:"
@@ -1049,8 +1048,8 @@ public class Menu {
                                     + "\n4. Edificación entrenamiento Bounty Hunters y Militia Civil"
                                     + "\n5. Edificación para entrenar entrenamiento Destroyer"
                                     + "\n6. Edificación para entrenar F22_Raptor");
-                            opcionEdif = input.nextInt();
-                            switch (opcionEdif) {
+                            OE = input.nextInt();
+                            switch (OE) {
                                 case 1:
                                     if (B.getCobre() >= 500 && B.getPlata() >= 100) {
                                         EdificacionesBravosi Oro = (EdificacionesBravosi) new MinaOro();
@@ -1215,8 +1214,8 @@ public class Menu {
                                     + "\n2. Super Soldado"
                                     + "\n3. Vehículo Terrestre"
                                     + "\n4. Vehículo Aéreo");
-                            opcionAtaque = input.nextInt();
-                            switch (opcionAtaque) {
+                            OA = input.nextInt();
+                            switch (OA) {
                                 case 1:
                                     System.out.println("Ataco a la militia");
                                     break;
@@ -1242,8 +1241,8 @@ public class Menu {
                         case 4:
                             System.out.println("Verificar cantidad de recursos y mejorar el CENTRO DE MANDO");
                             System.out.println("1. Verificar cantidad de recursos y edificaciones creadas\n2. Mejorar el centro de mando");
-                            VerRoMejora = input.nextInt();
-                            switch (VerRoMejora) {
+                            Mejora = input.nextInt();
+                            switch (Mejora) {
                                 case 1:
                                     System.out.println("nada");
                                 case 2:
@@ -1262,8 +1261,8 @@ public class Menu {
                         B.getEdificacionesBravosi().get(i).GenerarRecurso();
                     }
 
-                } else if (opcionRazaJ1 == 3) {
-                    switch (opcionSubMenuTurnos) {
+                } else if (OpcRJ2 == 3) {
+                    switch (OSMT) {
                         case 1:
                             System.out.println("Crea edificaciones");
                             System.out.println("Seleccione qué edificación desea crear:"
@@ -1273,8 +1272,8 @@ public class Menu {
                                     + "\n4. Edificación entrenamiento WizardSaint y Raiders"
                                     + "\n5. Edificación para entrenar entrenamiento Dragon"
                                     + "\n6. Edificación para entrenar ShadowFiend");
-                            opcionEdif = input.nextInt();
-                            switch (opcionEdif) {
+                            OE = input.nextInt();
+                            switch (OE) {
                                 case 1:
                                     if (T.getCobre() >= 500 && T.getPlata() >= 100) {
                                         EdificacionesTelekhines Oro = (EdificacionesTelekhines) new MinaOro();
@@ -1439,8 +1438,8 @@ public class Menu {
                                     + "\n2. Super Soldado"
                                     + "\n3. Vehículo Terrestre"
                                     + "\n4. Vehículo Aéreo");
-                            opcionAtaque = input.nextInt();
-                            switch (opcionAtaque) {
+                            OA = input.nextInt();
+                            switch (OA) {
                                 case 1:
                                     System.out.println("Ataco a la militia");
                                     break;
@@ -1466,8 +1465,8 @@ public class Menu {
                         case 4:
                             System.out.println("Verificar cantidad de recursos y mejorar el CENTRO DE MANDO");
                             System.out.println("1. Verificar cantidad de recursos y edificaciones creadas\n2. Mejorar el centro de mando");
-                            VerRoMejora = input.nextInt();
-                            switch (VerRoMejora) {
+                            Mejora = input.nextInt();
+                            switch (Mejora) {
                                 case 1:
                                     System.out.println("Seleccionó ver todos sus recursos y edif... + soldados+++ y ver la vida de los mismos...");
                                 case 2:
