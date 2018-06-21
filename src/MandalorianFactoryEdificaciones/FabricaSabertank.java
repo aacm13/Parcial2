@@ -30,7 +30,7 @@ public class FabricaSabertank implements EdificacionesMandalorian{
 
     @Override
     public void GenerarRecurso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
 

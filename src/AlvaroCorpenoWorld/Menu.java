@@ -15,8 +15,6 @@ package AlvaroCorpenoWorld;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 import AbstractFactoryBravos.Bravos;
 import AbstractFactoryMandalore.Mandalore;
 import AbstractFactoryTelekhines.Telekhines;
@@ -53,7 +51,6 @@ public class Menu {
         Mandalore M = new Mandalore();
         Bravos B = new Bravos();
         Telekhines T = new Telekhines();
-        // Militias
         MilitiaCivil MGH = new MilitiaCivil();
         NiteOwls MO = new NiteOwls();
         Raider MEs = new Raider();
@@ -97,7 +94,7 @@ public class Menu {
                 case 2:
                     muestraDatosUsuario(nombre, "Bravosi");
                     Bravos InicioB = new Bravos();
-                    input.nextLine(); //Soluciona el problema de limpiar el buffer
+                    input.nextLine(); 
                     System.out.println("Recursos Iniciales:\n" +
                             "Cobre: " + InicioB.getCobre() +
                             "\nPlata: " + InicioB.getPlata() +
@@ -166,14 +163,14 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());
-                                        int actualCobre = M.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempC = M.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 100;
                                         M.getEdificacionesMandalorian().add(Oro);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setCobre(costeCobre);
-                                        M.setPlata(costePlata);
+                                        M.setCobre(Cobre);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -190,14 +187,14 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());
-                                        int actualOro = M.getOro();
-                                        int costeOro = actualOro - 75;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 100;
                                         M.getEdificacionesMandalorian().add(Cobre);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setOro(costeOro);
-                                        M.setPlata(costePlata);
+                                        M.setOro(Oro);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -214,14 +211,14 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());
-                                        int actualOro = M.getOro();
-                                        int costerOro = actualOro - 75;
-                                        int actualCobre = M.getCobre();
-                                        int costeCobre = actualCobre - 100;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempC = M.getCobre();
+                                        int Cobre = TempC - 100;
                                         M.getEdificacionesMandalorian().add(Plata);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setCobre(costeCobre);
-                                        M.setOro(costerOro);
+                                        M.setCobre(Cobre);
+                                        M.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -238,17 +235,17 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());                      
-                                        int actualCobre = M.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 1500;
-                                        int actualOro = M.getOro();
-                                        int costeOro = actualOro - 750;
+                                        int TempC = M.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 1500;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 750;
                                         M.getEdificacionesMandalorian().add(EMO);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setOro(costeOro);
-                                        M.setCobre(costeCobre);
-                                        M.setPlata(costePlata);
+                                        M.setOro(Oro);
+                                        M.setCobre(Cobre);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -266,17 +263,17 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());                     
-                                        int actualCobre = M.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 2150;
-                                        int actualOro = M.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = M.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 1500;
                                         M.getEdificacionesMandalorian().add(LOB);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setOro(costoOro);
-                                        M.setCobre(costoCobre);
-                                        M.setPlata(costePlata);
+                                        M.setOro(Oro);
+                                        M.setCobre(Cobre);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -293,17 +290,17 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());                     
-                                        int actualCobre = M.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 2150;
-                                        int actualOro = M.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = M.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 1500;
                                         M.getEdificacionesMandalorian().add(LOB);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setOro(costoOro);
-                                        M.setCobre(costoCobre);
-                                        M.setPlata(costePlata);
+                                        M.setOro(Oro);
+                                        M.setCobre(Cobre);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -381,14 +378,14 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());
-                                        int actualCobre = B.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = B.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempC = B.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 100;
                                         B.getEdificacionesBravosi().add(Oro);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setCobre(costeCobre);
-                                        B.setPlata(costePlata);
+                                        B.setCobre(Cobre);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -405,14 +402,14 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());
-                                        int actualOro = B.getOro();
-                                        int costeOro = actualOro - 75;
-                                        int actualPlata = B.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 100;
                                         B.getEdificacionesBravosi().add(Cobre);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setOro(costeOro);
-                                        B.setPlata(costePlata);
+                                        B.setOro(Oro);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -424,19 +421,19 @@ public class Menu {
                                 case 3:
                                      
                                     if (B.getOro() >= 75 && B.getCobre() >= 500) {
-                                        EdificacionesBravosi Plata = (EdificacionesBravosi) new MinaPlata();
+                                        EdificacionesBravosi Plata =  (EdificacionesBravosi) new MinaPlata();
                                         System.out.println("Valores de fondos ANTES de Compra:");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());
-                                        int actualOro = B.getOro();
-                                        int costerOro = actualOro - 75;
-                                        int actualCobre = B.getCobre();
-                                        int costeCobre = actualCobre - 100;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempC = B.getCobre();
+                                        int Cobre = TempC - 100;
                                         B.getEdificacionesBravosi().add(Plata);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setCobre(costeCobre);
-                                        B.setOro(costerOro);
+                                        B.setCobre(Cobre);
+                                        B.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -453,17 +450,17 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());                      
-                                        int actualCobre = B.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = B.getPlata();
-                                        int costePlata = actualPlata - 1500;
-                                        int actualOro = B.getOro();
-                                        int costeOro = actualOro - 750;
+                                        int TempC = B.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 1500;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 750;
                                         B.getEdificacionesBravosi().add(EMO);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setOro(costeOro);
-                                        B.setCobre(costeCobre);
-                                        B.setPlata(costePlata);
+                                        B.setOro(Oro);
+                                        B.setCobre(Cobre);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -481,17 +478,17 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());                      
-                                        int actualCobre = B.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = B.getPlata();
-                                        int costoPlata = actualPlata - 2150;
-                                        int actualOro = B.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = B.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 1500;
                                         B.getEdificacionesBravosi().add(LOB);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setOro(costoOro);
-                                        B.setCobre(costoCobre);
-                                        B.setPlata(costoPlata);
+                                        B.setOro(Oro);
+                                        B.setCobre(Cobre);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -508,17 +505,17 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());                     
-                                        int actualCobre = M.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = M.getPlata();
-                                        int costoPlata = actualPlata - 2150;
-                                        int actualOro = M.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = M.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 1500;
                                         B.getEdificacionesBravosi().add(LOB);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setOro(costoOro);
-                                        B.setCobre(costoCobre);
-                                        B.setPlata(costoPlata);
+                                        B.setOro(Oro);
+                                        B.setCobre(Cobre);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -605,14 +602,14 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());
-                                        int actualCobre = T.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = T.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempC = T.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = T.getPlata();
+                                        int Plata = TempP - 100;
                                         T.getEdificacionesTelekhines().add(Oro);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setCobre(costeCobre);
-                                        T.setPlata(costePlata);
+                                        T.setCobre(Cobre);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -629,14 +626,14 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());
-                                        int actualOro = T.getOro();
-                                        int costeOro = actualOro - 75;
-                                        int actualPlata = T.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempO = T.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempP = T.getPlata();
+                                        int Plata = TempP - 100;
                                         T.getEdificacionesTelekhines().add(Cobre);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setOro(costeOro);
-                                        T.setPlata(costePlata);
+                                        T.setOro(Oro);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -653,14 +650,14 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());
-                                        int actualOro = T.getOro();
-                                        int costerOro = actualOro - 75;
-                                        int actualCobre = T.getCobre();
-                                        int costeCobre = actualCobre - 100;
+                                        int TemoO = T.getOro();
+                                        int Oro = TemoO - 75;
+                                        int TempC = T.getCobre();
+                                        int Cobre = TempC - 100;
                                         T.getEdificacionesTelekhines().add(Plata);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        B.setCobre(costeCobre);
-                                        B.setOro(costerOro);
+                                        B.setCobre(Cobre);
+                                        B.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -677,17 +674,17 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());                      
-                                        int actualCobre = B.getCobre();
-                                        int costoCobre = actualCobre - 500;
-                                        int actualPlata = B.getPlata();
-                                        int costoPlata = actualPlata - 1500;
-                                        int actualOro = B.getOro();
-                                        int costoOro = actualOro - 750;
+                                        int TempC = B.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 1500;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 750;
                                         T.getEdificacionesTelekhines().add(EMO);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setOro(costoOro);
-                                        T.setCobre(costoCobre);
-                                        T.setPlata(costoPlata);
+                                        T.setOro(Oro);
+                                        T.setCobre(Cobre);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -700,22 +697,22 @@ public class Menu {
                                 case 5:
                                     
                                     if (T.getCobre() >= 1400 && T.getPlata() >= 750 && T.getOro() >= 200) {
-                                       EdificacionesTelekhines LOB = new NidoDragon();
+                                       EdificacionesTelekhines X = new NidoDragon();
                                         System.out.println("Valores de fondos ANTES de Compra:");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());                     
-                                        int actualCobre = T.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = T.getPlata();
-                                        int costoPlata = actualPlata - 2150;
-                                        int actualOro = T.getOro();
-                                        int costoOro = actualOro - 1500;
-                                        T.getEdificacionesTelekhines().add(LOB);
+                                        int TempC = T.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = T.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = T.getOro();
+                                        int Oro = TempO - 1500;
+                                        T.getEdificacionesTelekhines().add(X);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setOro(costoOro);
-                                        T.setCobre(costoCobre);
-                                        T.setPlata(costoPlata);
+                                        T.setOro(Oro);
+                                        T.setCobre(Cobre);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -732,17 +729,17 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());                    
-                                        int actualCobre = T.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = T.getPlata();
-                                        int costoPlata = actualPlata - 2150;
-                                        int actualOro = T.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = T.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = T.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = T.getOro();
+                                        int Oro = TempO - 1500;
                                         T.getEdificacionesTelekhines().add(LOB);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setOro(costoOro);
-                                        T.setCobre(costoCobre);
-                                        T.setPlata(costoPlata);
+                                        T.setOro(Oro);
+                                        T.setCobre(Cobre);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -808,8 +805,8 @@ public class Menu {
                         T.getEdificacionesTelekhines().get(i).GenerarRecurso();
                     }
                 } else {
-                    System.out.println("Debió escojer una opción válida...");
-                }                //Acá puedo mostrar el arreglo de prueba de edificaciones:
+                    System.out.println("Escoja una opción válida...");
+                }                
 
             }
 
@@ -836,7 +833,8 @@ public class Menu {
                                     + "\n3. Mina de Plata"
                                     + "\n4. Cuartel de NiteOwls y SuperCommando's"
                                     + "\n5. Fabrica de Basilisk"
-                                    + "\n6. Fabrica de SaberTank");opcionEdif = input.nextInt();
+                                    + "\n6. Fabrica de SaberTank");
+                            opcionEdif = input.nextInt();
                             switch (opcionEdif) {
                                 case 1:
                                     if (M.getCobre() >= 500 && M.getPlata() >= 100) {
@@ -845,14 +843,14 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());
-                                        int actualCobre = M.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempC = M.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 100;
                                         M.getEdificacionesMandalorian().add(Oro);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setCobre(costeCobre);
-                                        M.setPlata(costePlata);
+                                        M.setCobre(Cobre);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -869,14 +867,14 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());
-                                        int actualOro = M.getOro();
-                                        int costeOro = actualOro - 75;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 100;
                                         M.getEdificacionesMandalorian().add(Cobre);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setOro(costeOro);
-                                        M.setPlata(costePlata);
+                                        M.setOro(Oro);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -893,14 +891,14 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());
-                                        int actualOro = M.getOro();
-                                        int costerOro = actualOro - 75;
-                                        int actualCobre = M.getCobre();
-                                        int costeCobre = actualCobre - 100;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempC = M.getCobre();
+                                        int Cobre = TempC - 100;
                                         M.getEdificacionesMandalorian().add(Plata);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setCobre(costeCobre);
-                                        M.setOro(costerOro);
+                                        M.setCobre(Cobre);
+                                        M.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -917,17 +915,17 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());                      
-                                        int actualCobre = M.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 1500;
-                                        int actualOro = M.getOro();
-                                        int costeOro = actualOro - 750;
+                                        int TempC = M.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 1500;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 750;
                                         M.getEdificacionesMandalorian().add(EMO);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setOro(costeOro);
-                                        M.setCobre(costeCobre);
-                                        M.setPlata(costePlata);
+                                        M.setOro(Oro);
+                                        M.setCobre(Cobre);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -945,17 +943,17 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());                     
-                                        int actualCobre = M.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 2150;
-                                        int actualOro = M.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = M.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 1500;
                                         M.getEdificacionesMandalorian().add(LOB);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setOro(costoOro);
-                                        M.setCobre(costoCobre);
-                                        M.setPlata(costePlata);
+                                        M.setOro(Oro);
+                                        M.setCobre(Cobre);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -972,17 +970,17 @@ public class Menu {
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
                                         System.out.println("PLATA:"+M.getPlata());                     
-                                        int actualCobre = M.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = M.getPlata();
-                                        int costePlata = actualPlata - 2150;
-                                        int actualOro = M.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = M.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 1500;
                                         M.getEdificacionesMandalorian().add(LOB);
                                         System.out.println(M.getEdificacionesMandalorian().size());
-                                        M.setOro(costoOro);
-                                        M.setCobre(costoCobre);
-                                        M.setPlata(costePlata);
+                                        M.setOro(Oro);
+                                        M.setCobre(Cobre);
+                                        M.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+M.getOro());
                                         System.out.println("COBRE:"+M.getCobre());
@@ -1020,10 +1018,11 @@ public class Menu {
                                     System.out.println("Escoja una opción válida");
                                     break;
                             }
+
                             break;
                         case 3:
-                            System.out.println("Atacar\nSeleccione a quién desea atacar..."); //Puedo poner afuera de todo esto el muestreo de los recursos actuales...
-                            MGH.damage(MGH.attack());
+                            System.out.println("Atacar\nSeleccione a quién desea atacar..."); 
+                            MGH.damage(MO.attack());
                             System.out.println(MGH.getVida());
                             break;
                         case 4:
@@ -1039,8 +1038,7 @@ public class Menu {
                     for (int i = 0; i < M.getEdificacionesMandalorian().size(); i++) {
                         M.getEdificacionesMandalorian().get(i).GenerarRecurso();
                     }
-
-                } else if (opcionRazaJ2 == 2) {
+                } else if (opcionRazaJ1 == 2) {
                     switch (opcionSubMenuTurnos) {
                         case 1:
                             System.out.println("Crea edificaciones");
@@ -1060,14 +1058,14 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());
-                                        int actualCobre = B.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = B.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempC = B.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 100;
                                         B.getEdificacionesBravosi().add(Oro);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setCobre(costeCobre);
-                                        B.setPlata(costePlata);
+                                        B.setCobre(Cobre);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -1084,14 +1082,14 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());
-                                        int actualOro = B.getOro();
-                                        int costeOro = actualOro - 75;
-                                        int actualPlata = B.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 100;
                                         B.getEdificacionesBravosi().add(Cobre);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setOro(costeOro);
-                                        B.setPlata(costePlata);
+                                        B.setOro(Oro);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -1103,19 +1101,19 @@ public class Menu {
                                 case 3:
                                      
                                     if (B.getOro() >= 75 && B.getCobre() >= 500) {
-                                        EdificacionesBravosi Plata = (EdificacionesBravosi) new MinaPlata();
+                                        EdificacionesBravosi Plata =  (EdificacionesBravosi) new MinaPlata();
                                         System.out.println("Valores de fondos ANTES de Compra:");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());
-                                        int actualOro = B.getOro();
-                                        int costerOro = actualOro - 75;
-                                        int actualCobre = B.getCobre();
-                                        int costeCobre = actualCobre - 100;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempC = B.getCobre();
+                                        int Cobre = TempC - 100;
                                         B.getEdificacionesBravosi().add(Plata);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setCobre(costeCobre);
-                                        B.setOro(costerOro);
+                                        B.setCobre(Cobre);
+                                        B.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -1132,17 +1130,17 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());                      
-                                        int actualCobre = B.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = B.getPlata();
-                                        int costePlata = actualPlata - 1500;
-                                        int actualOro = B.getOro();
-                                        int costeOro = actualOro - 750;
+                                        int TempC = B.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 1500;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 750;
                                         B.getEdificacionesBravosi().add(EMO);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setOro(costeOro);
-                                        B.setCobre(costeCobre);
-                                        B.setPlata(costePlata);
+                                        B.setOro(Oro);
+                                        B.setCobre(Cobre);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -1160,17 +1158,17 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());                      
-                                        int actualCobre = B.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = B.getPlata();
-                                        int costoPlata = actualPlata - 2150;
-                                        int actualOro = B.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = B.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 1500;
                                         B.getEdificacionesBravosi().add(LOB);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setOro(costoOro);
-                                        B.setCobre(costoCobre);
-                                        B.setPlata(costoPlata);
+                                        B.setOro(Oro);
+                                        B.setCobre(Cobre);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -1187,17 +1185,17 @@ public class Menu {
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
                                         System.out.println("PLATA:"+B.getPlata());                     
-                                        int actualCobre = B.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = B.getPlata();
-                                        int costoPlata = actualPlata - 2150;
-                                        int actualOro = B.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = M.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = M.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = M.getOro();
+                                        int Oro = TempO - 1500;
                                         B.getEdificacionesBravosi().add(LOB);
                                         System.out.println(B.getEdificacionesBravosi().size());
-                                        B.setOro(costoOro);
-                                        B.setCobre(costoCobre);
-                                        B.setPlata(costoPlata);
+                                        B.setOro(Oro);
+                                        B.setCobre(Cobre);
+                                        B.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+B.getOro());
                                         System.out.println("COBRE:"+B.getCobre());
@@ -1263,7 +1261,8 @@ public class Menu {
                     for (int i = 0; i < B.getEdificacionesBravosi().size(); i++) {
                         B.getEdificacionesBravosi().get(i).GenerarRecurso();
                     }
-                } else if (opcionRazaJ2 == 3) {
+
+                } else if (opcionRazaJ1 == 3) {
                     switch (opcionSubMenuTurnos) {
                         case 1:
                             System.out.println("Crea edificaciones");
@@ -1283,14 +1282,14 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());
-                                        int actualCobre = T.getCobre();
-                                        int costeCobre = actualCobre - 500;
-                                        int actualPlata = T.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempC = T.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = T.getPlata();
+                                        int Plata = TempP - 100;
                                         T.getEdificacionesTelekhines().add(Oro);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setCobre(costeCobre);
-                                        T.setPlata(costePlata);
+                                        T.setCobre(Cobre);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -1307,14 +1306,14 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());
-                                        int actualOro = T.getOro();
-                                        int costeOro = actualOro - 75;
-                                        int actualPlata = T.getPlata();
-                                        int costePlata = actualPlata - 100;
+                                        int TempO = T.getOro();
+                                        int Oro = TempO - 75;
+                                        int TempP = T.getPlata();
+                                        int Plata = TempP - 100;
                                         T.getEdificacionesTelekhines().add(Cobre);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setOro(costeOro);
-                                        T.setPlata(costePlata);
+                                        T.setOro(Oro);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -1331,14 +1330,14 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());
-                                        int actualOro = T.getOro();
-                                        int costerOro = actualOro - 75;
-                                        int actualCobre = T.getCobre();
-                                        int costeCobre = actualCobre - 100;
+                                        int TemoO = T.getOro();
+                                        int Oro = TemoO - 75;
+                                        int TempC = T.getCobre();
+                                        int Cobre = TempC - 100;
                                         T.getEdificacionesTelekhines().add(Plata);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        B.setCobre(costeCobre);
-                                        B.setOro(costerOro);
+                                        B.setCobre(Cobre);
+                                        B.setOro(Oro);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -1355,17 +1354,17 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());                      
-                                        int actualCobre = B.getCobre();
-                                        int costoCobre = actualCobre - 500;
-                                        int actualPlata = B.getPlata();
-                                        int costoPlata = actualPlata - 1500;
-                                        int actualOro = B.getOro();
-                                        int costoOro = actualOro - 750;
+                                        int TempC = B.getCobre();
+                                        int Cobre = TempC - 500;
+                                        int TempP = B.getPlata();
+                                        int Plata = TempP - 1500;
+                                        int TempO = B.getOro();
+                                        int Oro = TempO - 750;
                                         T.getEdificacionesTelekhines().add(EMO);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setOro(costoOro);
-                                        T.setCobre(costoCobre);
-                                        T.setPlata(costoPlata);
+                                        T.setOro(Oro);
+                                        T.setCobre(Cobre);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -1378,22 +1377,22 @@ public class Menu {
                                 case 5:
                                     
                                     if (T.getCobre() >= 1400 && T.getPlata() >= 750 && T.getOro() >= 200) {
-                                       EdificacionesTelekhines LOB = new NidoDragon();
+                                       EdificacionesTelekhines X = new NidoDragon();
                                         System.out.println("Valores de fondos ANTES de Compra:");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());                     
-                                        int actualCobre = T.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = T.getPlata();
-                                        int costoPlata = actualPlata - 2150;
-                                        int actualOro = T.getOro();
-                                        int costoOro = actualOro - 1500;
-                                        T.getEdificacionesTelekhines().add(LOB);
+                                        int TempC = T.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = T.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = T.getOro();
+                                        int Oro = TempO - 1500;
+                                        T.getEdificacionesTelekhines().add(X);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setOro(costoOro);
-                                        T.setCobre(costoCobre);
-                                        T.setPlata(costoPlata);
+                                        T.setOro(Oro);
+                                        T.setCobre(Cobre);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -1410,17 +1409,17 @@ public class Menu {
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
                                         System.out.println("PLATA:"+T.getPlata());                    
-                                        int actualCobre = T.getCobre();
-                                        int costoCobre= actualCobre - 400;
-                                        int actualPlata = T.getPlata();
-                                        int costoPlata = actualPlata - 2150;
-                                        int actualOro = T.getOro();
-                                        int costoOro = actualOro - 1500;
+                                        int TempC = T.getCobre();
+                                        int Cobre= TempC - 400;
+                                        int TempP = T.getPlata();
+                                        int Plata = TempP - 2150;
+                                        int TempO = T.getOro();
+                                        int Oro = TempO - 1500;
                                         T.getEdificacionesTelekhines().add(LOB);
                                         System.out.println(T.getEdificacionesTelekhines().size());
-                                        T.setOro(costoOro);
-                                        T.setCobre(costoCobre);
-                                        T.setPlata(costoPlata);
+                                        T.setOro(Oro);
+                                        T.setCobre(Cobre);
+                                        T.setPlata(Plata);
                                         System.out.println("nuevos valores de fondos");
                                         System.out.println("ORO:"+T.getOro());
                                         System.out.println("COBRE:"+T.getCobre());
@@ -1470,9 +1469,9 @@ public class Menu {
                             VerRoMejora = input.nextInt();
                             switch (VerRoMejora) {
                                 case 1:
-                                    System.out.println("nada");
+                                    System.out.println("Seleccionó ver todos sus recursos y edif... + soldados+++ y ver la vida de los mismos...");
                                 case 2:
-                                    System.out.println("centro de mando...");
+                                    System.out.println("Seleccionó mejorar centro de mando...");
                             }
                             break;
                         case 5:
@@ -1485,6 +1484,7 @@ public class Menu {
                     for (int i = 0; i < T.getEdificacionesTelekhines().size(); i++) {
                         T.getEdificacionesTelekhines().get(i).GenerarRecurso();
                     }
+                    
                 } else {
                     System.out.println("Escoja una opción válida...");
                 }

@@ -58,10 +58,8 @@ public class FuncionesMenu {
 
             } else if (opcionRaza == 2) {
                 muestraDatosUsuario(nombre, "Bravosi");
-                //System.out.println("Esto mandará a llamar la factory de esta raza para proporcionar las opciones que desea ejecutar");
                 Bravos B = new Bravos();
-                input.nextLine(); //Soluciona el problema de limpiar el buffer
-                //Dispongo tando de \n (salto de línea) como de la creación de tabs \t ...
+                input.nextLine();
                 System.out.println("Recursos Iniciales:\n" +
                         "Cobre: " + B.getCobre() +
                         "\nPlata: " + B.getPlata() +
@@ -77,7 +75,7 @@ public class FuncionesMenu {
             } else if (opcionRaza == 3) {
                 muestraDatosUsuario(nombre, "Raza Esqueletos");
                 Telekhines T = new Telekhines();
-                input.nextLine(); //Soluciona el problema de limpiar el buffer
+                input.nextLine(); 
                 
                 System.out.println("Recursos Iniciales:\n" +
                         "Cobre: " + T.getCobre() +
