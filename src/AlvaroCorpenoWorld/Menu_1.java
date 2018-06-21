@@ -71,23 +71,22 @@ public class Menu_1 {
             switch (OpcR) {
                 case 1:
                     muestraDatosUsuario(nombre, "Mandalorian");
-                    //Esto inicializa un centro de mando nuevo para jugador uno o jugador dos, o ambos al mismo tiempo, en el supuesto que escojan la misma raza...
+                    
                     Mandalore InicioM = new Mandalore();
-                    input.nextLine(); //Soluciona el problema de limpiar el buffer
-                    //Dispongo tando de \n (salto de línea) como de la creación de tabs \t ... y muestro los valores de los recursos con los que inicializa la nueva partida.
+                    input.nextLine(); 
                     System.out.println("Recursos Iniciales:\n"
                             + "Cobre: " + InicioM.getCobre()
                             + "\nPlata: " + InicioM.getPlata()
                             + "\nOro: " + InicioM.getOro());
                     if (a == 1) {
-                        //Acá asigno la selección de raza y nombre del jugador uno a un par de variables auxiliares que me servirá más adelante.
+                        
                         OpcRJ1 = OpcR;
                         nombreJ1 = nombre;
                     } else {
-                        //Acá asigno la selección de raza y nombre del jugador uno a un par de variables auxiliares que me servirá más adelante.
+                        
                         OpcRJ2 = OpcR;
                         nombreJ2 = nombre;
-                    }   //Ejecuto la función del contador de a para pedir un último usuario...
+                    }   
                     a += 1;
                     break;
                 case 2:
@@ -140,7 +139,7 @@ public class Menu_1 {
                 } else if (J == 2) {
                     name = nombreJ2;
                 }
-                while (OSMT != 5) { //Podría luego agregar que este turno se termine ya sea luego de atacar o luego de se quede sin recursos por usar y hasta milicias para atacar (no más de un objetivo)
+                while (OSMT != 5) {
                     System.out.println("-----------------------------------------------");
                     System.out.println("TURNO JUGADOR 1: " + nombreJ1);
                     System.out.println("Ingrese la opción a ejecutar:");
